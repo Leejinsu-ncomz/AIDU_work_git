@@ -1,0 +1,20 @@
+<template>
+  <v-app>
+    <router-view></router-view>
+  </v-app>
+</template>
+
+<script>
+
+export default {
+  name: 'App',
+  data: () => ({
+    //
+  }),
+};
+</script>
+
+<style>
+@import "./styles/reset.css";
+@import "./styles/ui.css";
+</style>

@@ -1,0 +1,55 @@
+@charset "UTF-8";
+html {overflow-x: auto !important;}
+html,body{min-width:1400px; margin:0 auto; text-align:center;}
+.v-application--wrap {min-height: inherit !important;}
+
+/******* header *******/
+#header {position: absolute;top: 0px;left: 0px;width: 100%;z-index: 100;}
+#header::before {content: '';position: absolute;top: 90px;left: 0px;width: 100%;height: 1px;background: #efefef;box-shadow: 0px 4px 10px 1px rgb(0 0 0 / 10%);-webkit-box-shadow: 0px 4px 10px 1px rgb(0 0 0 / 10%);-moz-box-shadow: 0px 4px 10px 1px rgb(0 0 0 / 10%);}
+#header .subMenuBg {position: absolute;overflow: hidden;top: 90px;left: 0px;width: 100%;height: 0px;background: #ffffff;z-index: -1;}
+#header .subMenuBg.show {height: calc(100% - 90px);overflow: visible;}
+#header .headerWrap {position: relative;width: 1400px;margin: 0 auto;}
+.headerWrap .logo {position: absolute;top:32px;left: 40px;}
+.headerWrap .loginJoinWrap {position: absolute;top: 23px;right: 40px; display: flex;align-items: center;}
+.headerWrap .loginJoinWrap .userName {display: inline-block;margin-right: 8px;line-height: 20px;font-size: 15px;color: #667d85;}
+.headerWrap .loginJoinWrap .subUserInfoBtn {display: inline-block;width: 24px;height: 24px;background: url("../assets/images/arr_down_icon.png") no-repeat center;}
+.headerWrap .loginJoinWrap .userIcon {display: inline-block;width: 45px;height: 45px;margin-left: 10px;background: #ccc;}
+
+/* gnb */
+#gnb {margin: 0px 176px 0px 292px;}
+#gnb ul {padding: 0px;margin: 0px;}
+#gnb .gnbWrap {display: flex;}
+#gnb .gnbWrap .gnbList {position: relative; width: 20%;}
+#gnb .gnbWrap .gnbList > .gnbLink {display: inline-block;width: 100%;padding:30px 0px;line-height: 30px;font-size: 19px;color: #0c323d;font-weight: 500;text-align: left;}
+#gnb .gnbWrap .gnbList .subGnbWrap {display: none;width: 100%;padding: 20px 0px 30px;}
+#gnb:hover .gnbWrap .gnbList .subGnbWrap {display: block;}
+#gnb .gnbWrap .gnbList .subGnbWrap .subGnbListLink {display: inline-block;width: 100%;line-height: 30px;font-size: 15px;color: #667d85;text-align: left;}
+
+.footer{border-top:1px solid #dddddd;}
+.footer .footerConTopWrap {border-bottom:1px solid #dddddd;}
+.footer .footerConTop {display: flex;align-items: center;justify-content: space-between;width: 1400px;margin: 0 auto;padding: 20px 40px;}
+.footer .footerSubCon ul,
+.footer .footerOtherCon ul {display: flex;padding: 0;}
+.footer .footerSubCon ul li {position: relative;padding-right: 84px;}
+.footer .footerSubCon ul li:after {content: '';display: block;position: absolute;top: 13px;right: 40px;width: 2px;height: 15px;background: #dddddd;}
+.footer .footerSubCon ul li:last-child::after {display: none;}
+.footer .footerSubCon ul li a {display: inline-block;line-height: 40px;font-size: 18px;color: #0c323d;}
+.footer .footerOtherCon ul li + li {margin-left: 40px;}
+.footer .footerOtherCon ul li a {line-height: 40px;font-size: 16px;opacity: 0.5;color: #0c323d;}
+.footer .footerConBotWrap {padding: 60px 0px;}
+.footer .footerConBot {display: flex;justify-content: space-between;width: 1400px;margin: 0px auto;padding: 0px 40px;}
+.footer .footerConBot .incTxt {opacity: 0.5;font-size: 18px;color: #0c323d;}
+
+
+
+.contentContainer{min-height:calc(100vh - 240px);padding-top: 90px;}
+.contentContainer .rowBox{overflow:hidden;}
+.contentContainer .rowBox + .rowBox{border-top:1px solid #dddddd;}
+.contentContainer .rowBox .unitBox{width:1320px; margin:0 auto;}
+
+/** @Ncomz amb_layout_01  V 1.2.1 | @Ncomz Design -  @mo @joo **/
+
+.txtCenter {text-align:center !important;}
+.txtRight  {text-align:right !important;}
+.txtLeft   {text-align:left !important;}
+.hiddenTxt {display: inline-block;width: 0;height: 0;overflow: hidden;}
