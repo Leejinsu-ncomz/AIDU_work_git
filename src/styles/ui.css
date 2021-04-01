@@ -3,112 +3,45 @@
 @import url("reset.css");
 @import url("common.css");
 @import url("style_01.css");
-/* 
-    class명 지정시 카멜 기법기본에
-*/
 
-/* button style */
-/*
-size 30,32, 40, 50, 60
-
-tab button 54
-
-input default 40
-
-checkbox,
-radio 20
-*/
-/* button */
-.btn{border-radius:2px; border:1px solid transparent; background:none; padding:0 20px;}
-.btn.xs{height:30px; line-height:28px; min-width:70px; font-size:14px;}
-.btn.s{height:32px; line-height:30px;}
-.btn.m{height:40px; line-height:38px; min-width:80px; font-size:16px;}
-.btn.l{height:50px; line-height:48px; font-size:17px;}
-.btn.xl{height:60px; line-height:58px; font-size:20px;}
-
-.btn.xs.round{border-radius:15px;}
-.btn.s.round{border-radius:16px;}
-.btn.m.round{border-radius:20px;}
-.btn.l.round{border-radius:25px;}
-.btn.xl.round{border-radius:30px;}
-
-.btn.greenGray{color:#ffffff; border-color:#667d85; background-color:#667d85;}
-.btn.greenGray:hover{color:#ffffff; border-color:#48656d; background-color:#48656d;}
-.btn.whiteGreen{color:#0c323d; border-color:#a7c1bc; background-color:#ffffff;}
-.btn.whiteGreen:hover{color:#2cbbb7; border-color:#2cbbb7; background-color:#ffffff;}
-.btn.grayWhite{color:#48656d; border-color:#e8ebf0; background-color:#e8ebf0;}
-.btn.grayWhite:hover{color:#48656d; border-color:#8d9aaa; background:#ffffff;}
-.btn.grayDark{color:#ffffff; border-color:#8d9aaa; background-color:#8d9aaa;}
-.btn.grayDark:hover{color:#ffffff; border-color:#5a6674; background-color:#5a6674;}
-.btn.grayBlue{color:#0c323d; border-color:#f3f3f3; background-color:#f3f3f3;}
-.btn.grayBlue:hover{color:#ffffff; border-color:#397fd4; background-color:#397fd4;}
-.btn.blue{color:#ffffff; border-color:#397fd4; background-color:#397fd4;}
-.btn.blue:hover{color:#ffffff; border-color:#2e66aa; background-color:#2e66aa;}
-.btn.aqua{color:#ffffff; border-color:#499ed5; background-color:#499ed5;}
-.btn.aqua:hover{color:#ffffff; border-color:#3a7eaa; background-color:#3a7eaa;}
-.btn.green{color:#ffffff; border-color:#2cbbb7; background-color:#2cbbb7;}
-.btn.green:hover{color:#ffffff; border-color:#239692; background-color:#239692;}
-.btn.grayGreen{ color:#0c323d; border-color:#e1eaea; background-color:#e1eaea;}
-.btn.grayGreen:hover{color:#0c323d; border-color:#b4bbbb; background-color:#b4bbbb;}
-
-/* checkbox, radio input */
-.inpField{display:inline-block; vertical-align:middle; min-width:20px; min-height:20px; position:relative; line-height:20px;}
-.inpField > input[type=checkbox],
-.inpField > input[type=radio]{display:none;}
-.inpField.inpOnly .text,
-.inpField.inpOnly .text{font-size:0; padding:0;}
-.inpField .text{display:block; min-height:20px; padding-left:27px;}
-.inpField .text:before{content:""; display:inline-block; vertical-align:middle; width:20px; height:20px; position:absolute; left:0; background:url(../assets/images/ico_inpField.png) no-repeat 0 0;}
-.inpField > input[type=radio] ~ .text:before{background-position-x:-21px;}
-.inpField > input[type=checkbox]:checked ~ .text:before,
-.inpField > input[type=radio]:checked ~ .text:before{background-position-y:-21px;}
-.inpField > input[type=checkbox]:disabled ~ .text:before,
-.inpField > input[type=radio]:disabled ~ .text:before{background-position-y:-42px;}
-.inpField > input[type=checkbox]:checked:disabled ~ .text:before,
-.inpField > input[type=radio]:checked:disabled ~ .text:before{background-position-y:-63px;}
-
-input.inp{height:40px; line-height:38px; border:1px solid #dddddd; border-radius:2px; padding:0 13px; font-size:15px; color:#0c323d;}
-
-select::-ms-expand {display:none;}
-select{-webkit-appearance: none;-moz-appearance: none;}
-select.inp{height:40px; line-height:38px; border:1px solid #dddddd; border-radius:2px; padding:0 44px 0 13px; font-size:15px; color:#0c323d; background:url(../assets/images/ico_select.png) no-repeat center right 17px;}
-textarea.inp{width:100%; border:1px solid #dddddd; border-radius:2px; min-height:80px; font-size:15px; line-height:20px; color:#0c323d; padding:8px 14px; resize: none}
-.inp::-webkit-input-placeholder {color:#a0b0b6;}
-.inp:focus{border-color:#2cbbb7;}
-/*  */
-
+/* point color */
 .pColor01{color:#397fd4 !important;}
-/* title type01 */
-.titArea p {margin: 0;padding: 0;}
-.titArea.type01 {display: block;text-align: center;padding: 60px 0 30px;}
-.titArea.type01 .tit {line-height: 58px;font-size: 40px;padding-bottom: 10px;}
-.titArea.type01 .subTit {line-height: 42px;font-size: 22px;color: #9cacb1;}
+
+
 /* row title 폰트의 tit 의 폰트 사이즈가 2개 반영해야함. */
 .titArea{display:flex; justify-content:space-between; align-items:center; min-height:36px;}
 .titArea .tit{font-size:24px; color:#0c323d;}
-.ttitArea .tit > em{margin-left:8px; font-size:15px; color:#9cacb1;}
+.titArea .tit > em{margin-left:8px; font-size:15px; color:#9cacb1;}
+.titArea p {margin: 0;padding: 0;}	
+.titArea.type01 {display: block;text-align: center;padding: 60px 0 30px;}	
+.titArea.type01 .tit {line-height: 58px;font-size: 40px;padding-bottom: 10px;}	
+.titArea.type01 .subTit {line-height: 42px;font-size: 22px;color: #9cacb1;}
+
 /* table 바로 상단*/
 .titArea + .tpArea{margin-top:20px;}
 .tpArea{display:flex; justify-content:space-between; align-items:center; min-height:24px;}
 .tpArea .tit{font-size:15px; color:#667d85;}
 
-/* table */
-table{width:100%;}
-* + .listTable,
-* + .rowTable{margin-top:10px;}
-.listTable{border-width:1px 0 1px 0; border-style:solid; border-color:#85989e transparent #eeeeee transparent; text-align:center;}
+/* layer 관련  */
+.layerModalWrap .listTable thead th{height:50px; font-size:15px; padding:5px;}
+.layerModalWrap .listTable tbody tr > *{height:39px; font-size:14px;}
 
-.listTable thead th{font-size:17px; font-weight:400; color:#0c323d; height:60px; border-bottom:1px solid #a3acaf; padding:10px 5px; }
-.listTable tbody tr > *{border-top:1px solid #eeeeee; height:50px; font-size:15px; color:#48656d; padding:5px;}
-.listTable tbody tr:hover > *{background-color:#f4f4f4;}
-.listTable tbody th{}
-.listTable tbody td{}
+/* input 관련 */
+.unitGroup{overflow:hidden;}
+.unitGroup .unit{text-align:left;}
+.unitGroup .unit + .unit{margin-top:30px;}
+.unitGroup .unit dt{font-size:17px; color:#0c323d; font-weight:500; margin-bottom:10px;}
 
+/* search area, inpGroup */
+.searchArea,
+.inpGroup{display:flex; align-items:center;}
+.searchArea > .inp,
+.inpGroup > .inp{width:100%;}
+.searchArea > *,
+.inpGroup > *{display:inline-flex;}
+.searchArea .btnArea,
+.inpGroup .btnArea{margin-left:8px;}
+.searchArea .btnArea button + button{margin-left:4px;}
+.inpGroup button{min-width:100px; padding:0 26px;}
 
-.rowTable{border-width:1px 0px 0px 0px; border-style:solid; border-color:#85989e transparent transparent transparent; text-align:left;}
-.rowTable th{height:53px; border-bottom:1px solid #eeeeee; background-color:#f3f3f3; padding:6px 20px; font-size:16px; color:#0c323d; font-weight:400;}
-.rowTable td{height:53px; border-bottom:1px solid #eeeeee; background-color:#ffffff; padding:6px 15px; font-size:15px; color:#0c323d;}
-
-.bullet{font-size:16px; font-weight:700; color:#e01533; vertical-align:text-top; margin-left:2px;}
-.rowTable td .inpField + .inpField{margin-left:105px;}
-.rowTable td .inp{min-width:339px;}
+p.text{font-size:16px; line-height:20px; overflow:hidden; word-break:break-all; color:#667d85; text-align:left;}
