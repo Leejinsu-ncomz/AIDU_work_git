@@ -291,6 +291,7 @@
                 </button>
             </div>
         </div>
+
         <!-- 프로젝트 생성/수정 팝업-->
         <div class="layerModalWrap" v-if="modalShow === 'modal-1'" >
             <div class="layerModal">
@@ -301,19 +302,25 @@
                     <form>
                         <div class="unitGroup">
                             <dl class="unit">
-                                <dt>프로젝트 명<em class="bullet">*</em></dt>
+                                <dt>
+                                    <span class="tit">프로젝트 명<em class="bullet">*</em></span>
+                                </dt>
                                 <dd>
                                     <input type="text" class="inp w100p"/>
                                 </dd>
                             </dl>
                             <dl class="unit">
-                                <dt>프로젝트 설명</dt>
+                                <dt>
+                                    <span class="tit">프로젝트 설명</span>
+                                </dt>
                                 <dd>
                                     <textarea class="inp" style="height:170px;" placeholder="언제 어디서나 AIDU를 통해 AI 모델을 만들어보세요."></textarea>
                                 </dd>
                             </dl>
                             <dl class="unit">
-                                <dt>프로젝트 오너</dt>
+                                <dt>
+                                    <span class="tit">프로젝트 오너</span>
+                                </dt>
                                 <dd>
                                     <input type="text" class="inp w100p" value="홍길동" disabled/>
                                 </dd>
@@ -693,6 +700,102 @@
             </div>
         </div>
 
+        <!-- 시뮬레이터 구성 정보 등록-->
+        <div class="layerModalWrap rowFull" v-if="modalShow === 'modal-6'">
+            <div class="layerModal">
+                <div class="modalHeader">
+                    <strong>시뮬레이터 구성 정보 등록</strong>
+                </div>
+                <div class="modalCnt">
+                    <div class="unitGroup rowGroup">
+                        <dl class="unit">
+                            <dt>
+                                <span class="tit">등록 유형</span>
+                            </dt>
+                            <dd>
+                                <select class="inp l">
+                                    <option>전체</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl class="unit">
+                            <dt>
+                                <span class="tit">데이터 속성</span>
+                            </dt>
+                            <dd>
+                                <select class="inp l">
+                                    <option>Number</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl class="unit">
+                            <dt>
+                                <span class="tit">데이터명</span>
+                            </dt>
+                            <dd>
+                                <input type="text" class="inp l" placeholder="데이터명"/>
+                            </dd>
+                        </dl>
+                        <dl class="unit">
+                            <dt>
+                                <span class="tit">기본값</span>
+                            </dt>
+                            <dd>
+                                <input type="text" class="inp l" placeholder="샘플 데이터"/>
+                            </dd>
+                        </dl>
+                        <dl class="unit">
+                            <dt>
+                                <span class="tit">데이터 설명</span>
+                            </dt>
+                            <dd>
+                                <input type="text" class="inp l" placeholder="데이터 설명"/>
+                            </dd>
+                        </dl>
+                        <div class="btnArea">
+                            <button type="button" class="btn l cBlue iconOnly add">
+                                <span class="text">추가</span>
+                            </button>
+                            <!-- <button type="button" class="btn l cGrayDark iconOnly delete">
+                                <span class="text">추가</span>
+                            </button> -->
+                        </div>
+                    </div>
+                    <p class="infoText">※ 콤보박스에 드롭다운 목록을 등록하시려면 기본값을 콤마(,)로 구분하여 입력해주세요.</p>
+                    <div class="unitGroup mgT30">
+                        <dl class="unit">
+                            <dt>
+                                <span class="tit">템플릿 등록</span>
+                                <div>
+                                    <p class="fileText pColor01 mgR20">{{fileName}}</p>
+                                    <!-- <button type="file" class="btn l cWhiteGreen">
+                                        <span class="text">파일선택</span>
+                                    </button> -->
+                                    <div class="fileUpload">
+                                        <input type="file" id="file" @change="fileChange" />
+                                        <label class="text" for="file">파일 선택</label>
+                                    </div>
+                                </div>
+                            </dt>
+                            <dd>
+                                <textarea class="inp" style="height:140px;" placeholder="템플릿 사용법을 적어주세요."></textarea>
+                            </dd>
+                        </dl>
+                    </div> 
+                </div>
+                <div class="modalFooter">
+                    <div class="btnArea mW">
+                        <button type="button" class="btn xl cGreen">
+                            <span class="text">가져오기</span>
+                        </button>
+                        <button type="button" class="btn xl cGrayGreen" @click="fnClose">
+                            <span class="text">취소</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </template>
 
@@ -701,7 +804,7 @@
 export default {
   name: 'App',
   data: () => ({
-    modalShow: false,
+    modalShow: 'modal-6',
     buttons : [
         {
             name : '프로젝트 생성/수정',
@@ -722,17 +825,20 @@ export default {
             name : '시뮬레이터 구성 정보 등록',
             id : 'modal-6'
         }
-    ]
+    ],
+    fileName : '',
   }),
   methods: {
         fnOpen: function (id) {
-            console.log(id)
             this.modalShow = id;
             document.body.classList.add("modal-open");
         },
         fnClose: function () {
             this.modalShow = null;
             document.body.classList.remove("modal-open");
+        },
+        fileChange(e) {
+            this.fileName = e.target.files[0].name;
         }
     }
 };

@@ -16,6 +16,30 @@ html,body{min-width:1400px; margin:0 auto; text-align:center;}
 .mgT5   {margin-top:5px !important;}
 .mgT10  {margin-top:10px !important;}
 .mgT20  {margin-top:20px !important;}
+.mgT30  {margin-top:30px !important;}
+.mgT40  {margin-top:40px !important;}
+.mgT50  {margin-top:50px !important;}
+.mgB0   {margin-bottom:0px !important;}
+.mgB5   {margin-bottom:5px !important;}
+.mgB10  {margin-bottom:10px !important;}
+.mgB20  {margin-bottom:20px !important;}
+.mgB30  {margin-bottom:30px !important;}
+.mgB40  {margin-bottom:40px !important;}
+.mgB50  {margin-bottom:50px !important;}
+.mgL0   {margin-left:0px !important;}
+.mgL5   {margin-left:5px !important;}
+.mgL10  {margin-left:10px !important;}
+.mgL20  {margin-left:20px !important;}
+.mgL30  {margin-left:30px !important;}
+.mgL40  {margin-left:40px !important;}
+.mgL50  {margin-left:50px !important;}
+.mgR0   {margin-right:0px !important;}
+.mgR5   {margin-right:5px !important;}
+.mgR10  {margin-right:10px !important;}
+.mgR20  {margin-right:20px !important;}
+.mgR30  {margin-right:30px !important;}
+.mgR40  {margin-right:40px !important;}
+.mgR50  {margin-right:50px !important;}
 
 /* width */
 .w1p {width:1% !important;}
@@ -170,6 +194,9 @@ html,body{min-width:1400px; margin:0 auto; text-align:center;}
 
 .iconOnly.search:before{width:25px; height:25px; background:url(../assets/images/ico_search.png) no-repeat 0 0;}
 .iconOnly.refresh:before{width:24px; height:26px; background:url(../assets/images/ico_refresh.png) no-repeat 0 0;}
+.iconOnly.add:before{width:26px; height:26px; background:url(../assets/images/ico_addDelete.png) no-repeat 0 0;}
+.iconOnly.delete:before{width:26px; height:26px; background:url(../assets/images/ico_addDelete.png) no-repeat -26px 0;}
+
 
 /* checkbox, radio input */
 .inpField{display:inline-block; vertical-align:middle; min-width:20px; min-height:20px; position:relative; line-height:20px;}
@@ -187,11 +214,6 @@ html,body{min-width:1400px; margin:0 auto; text-align:center;}
 .inpField > input[type=radio]:checked:disabled ~ .text:before{background-position-y:-63px;}
 
 input.inp{height:40px; line-height:38px; border:1px solid #dddddd; border-radius:2px; padding:0 13px; font-size:15px; color:#0c323d;}
-input.inp.xs{height:30px; line-height:28px;}
-input.inp.s{height:32px; line-height:30px;}
-input.inp.m{height:40px; line-height:38px;}
-input.inp.l{height:50px; line-height:48px;}
-input.inp.xl{height:60px; line-height:58px;}
 select::-ms-expand {display:none;}
 select{-webkit-appearance: none;-moz-appearance: none;}
 select.inp{height:40px; line-height:38px; border:1px solid #dddddd; border-radius:2px; padding:0 44px 0 13px; font-size:15px; color:#0c323d; background:url(../assets/images/ico_select.png) no-repeat center right 17px;}
@@ -200,6 +222,22 @@ textarea.inp{width:100%; border:1px solid #dddddd; border-radius:2px; min-height
 .inp:focus{border-color:#2cbbb7;}
 .inp:disabled{background-color:#f4f4f4; color:#a0b0b6;}
 
+input.inp.xs,
+select.inp.xs{height:30px; line-height:28px;}
+input.inp.s,
+select.inp.s{height:32px; line-height:30px;}
+input.inp.m,
+select.inp.m{height:40px; line-height:38px;}
+input.inp.l,
+select.inp.l{height:50px; line-height:48px;}
+input.inp.xl,
+select.inp.xl{height:60px; line-height:58px;}
+
+/* input file */
+.fileUpload {display:inline-block; vertical-align:middle;}
+.fileUpload input[type="file"]{display:none;}
+.fileUpload label{display:block; min-width:100px; padding:0 18px; font-size:18px; color:#0c323d;  height:50px; line-height:48px; border:1px solid #a7c1bc; background-color:#ffffff; border-radius:2px;}
+.fileUpload label:hover{color:#2cbbb7; border-color:#2cbbb7; }
 /* table */
 table{width:100%;}
 * + .listTable,

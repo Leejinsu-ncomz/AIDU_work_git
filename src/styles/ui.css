@@ -8,7 +8,7 @@
 .pColor01{color:#397fd4 !important;}
 
 
-/* row title 폰트의 tit 의 폰트 사이즈가 2개 반영해야함. */
+/* row title */
 .titArea{display:flex; justify-content:space-between; align-items:center; min-height:36px;}
 .titArea .tit{font-size:24px; color:#0c323d;}
 .titArea .tit > em{margin-left:8px; font-size:15px; color:#9cacb1;}
@@ -17,7 +17,7 @@
 .titArea.type01 .tit {line-height: 58px;font-size: 40px;padding-bottom: 10px;}	
 .titArea.type01 .subTit {line-height: 42px;font-size: 22px;color: #9cacb1;}
 
-/* table 바로 상단*/
+/* contents 바로 상단*/
 .titArea + .tpArea{margin-top:20px;}
 .tpArea{display:flex; justify-content:space-between; align-items:center; min-height:24px;}
 .tpArea .tit{font-size:15px; color:#667d85;}
@@ -26,11 +26,21 @@
 .layerModalWrap .listTable thead th{height:50px; font-size:15px; padding:5px;}
 .layerModalWrap .listTable tbody tr > *{height:39px; font-size:14px;}
 .layerModalWrap.rowFull .modalHeader .searchArea{width:415px;}
+
 /* input 관련 */
 .unitGroup{overflow:hidden;}
 .unitGroup .unit{text-align:left;}
 .unitGroup .unit + .unit{margin-top:30px;}
-.unitGroup .unit dt{font-size:17px; color:#0c323d; font-weight:500; margin-bottom:10px;}
+.unitGroup .unit dt{display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;}
+.unitGroup .unit dt .tit{font-size:17px; color:#0c323d; font-weight:500;}
+.unitGroup.rowGroup{display:flex; align-items:flex-end; width:100%;}
+.unitGroup.rowGroup > *{text-align:left; display:inline-flex; width:100%; flex-direction:column; padding-right:5px;}
+.unitGroup.rowGroup > *:last-child{padding:0;}
+.unitGroup.rowGroup .btnArea{width:auto;}
+.unitGroup.rowGroup .unit + .unit{margin:0;}
+.unitGroup.rowGroup .unit dt{margin-bottom:9px;}
+.unitGroup.rowGroup .unit dt .tit{font-size:15px; line-height:17px; font-weight:400; color:#667d85;}
+.unitGroup.rowGroup .unit dd > *{width:100%;}
 
 /* search area, inpGroup */
 .searchArea,
@@ -44,7 +54,12 @@
 .searchArea .btnArea button + button{margin-left:4px;}
 .inpGroup button{min-width:100px; padding:0 26px;}
 
+/* text 관련 */
 p.text{font-size:16px; line-height:20px; overflow:hidden; word-break:break-all; color:#667d85; text-align:left; margin:0 !important;}
+p.fileText{display:inline; font-size:15px;}
+p.infoText{font-size:14px; line-height:16px; overflow:hidden; word-break:break-all; color:#9cacb1; text-align:left; margin:14px 0 0 0 !important;}
+
+/* image 관련 */
 .infoImg{width:100%; margin:18px 0 10px;}
 
 /* tree & table column */
