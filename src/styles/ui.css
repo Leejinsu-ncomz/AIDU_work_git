@@ -25,7 +25,7 @@
 /* layer 관련  */
 .layerModalWrap .listTable thead th{height:50px; font-size:15px; padding:5px;}
 .layerModalWrap .listTable tbody tr > *{height:39px; font-size:14px;}
-
+.layerModalWrap.rowFull .modalHeader .searchArea{width:415px;}
 /* input 관련 */
 .unitGroup{overflow:hidden;}
 .unitGroup .unit{text-align:left;}
@@ -44,4 +44,9 @@
 .searchArea .btnArea button + button{margin-left:4px;}
 .inpGroup button{min-width:100px; padding:0 26px;}
 
-p.text{font-size:16px; line-height:20px; overflow:hidden; word-break:break-all; color:#667d85; text-align:left;}
+p.text{font-size:16px; line-height:20px; overflow:hidden; word-break:break-all; color:#667d85; text-align:left; margin:0 !important;}
+.infoImg{width:100%; margin:18px 0 10px;}
+
+/* tree & table column */
+.treeTable{display:grid; grid-template-columns:39% auto; grid-column-gap:10px;}
+.treeTable .tree{border:1px solid #dddddd; height:100%; overflow-y:auto;}
