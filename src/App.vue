@@ -15,6 +15,5 @@ export default {
 </script>
 
 <style>
-@import "./styles/reset.css";
 @import "./styles/ui.css";
 </style>

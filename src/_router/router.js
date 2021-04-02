@@ -21,6 +21,14 @@ const projectRouter = [
     component: () => import('@/views/project/m2_01_01_000')
   }
 ]
+const example = [
+  {
+    path: 'example',
+    name: 'example',
+    title: '예시',
+    component: () => import('@/views/example/example.vue')
+  }
+]
 
 export const router = new Router({
   mode: 'history',
@@ -33,7 +41,8 @@ export const router = new Router({
       redirect: '/main',
       children: [
         ...portalHomeRouter,
-        ...projectRouter
+        ...projectRouter,
+        ...example
       ]
     }
   ]
