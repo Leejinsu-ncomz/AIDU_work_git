@@ -1,10 +1,12 @@
 <template>
     <div id="gnb" class="gnb" @mouseenter="subMenuBgShow" @mouseleave="subMenuBgHide">
         <ul class="gnbWrap">
-            <li class="gnbList">
+            <!-- 각 페이지 Active 효과 시 li태그에 active 클래스를 넣어주세요 -->
+            <li class="gnbList active">
                 <a href="" class="gnbLink">AI 교육 컨텐츠</a>
                 <ul class="subGnbWrap">
-                    <li class="subGnbList"><a href="" class="subGnbListLink">AI 교육컨텐츠</a></li>
+                    <!-- 각 페이지 Active 효과 시 li태그에 active 클래스를 넣어주세요 -->
+                    <li class="subGnbList active"><a href="" class="subGnbListLink">AI 교육컨텐츠</a></li>
                     <li class="subGnbList"><a href="" class="subGnbListLink">AIDU 사용자 가이드</a></li>
                     <li class="subGnbList"><a href="" class="subGnbListLink">AIDU 사례 실습 컨텐츠</a></li>
                 </ul>

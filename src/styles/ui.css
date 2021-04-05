@@ -50,7 +50,8 @@
 .searchArea > *,
 .inpGroup > *{display:inline-flex;}
 .searchArea .btnArea,
-.inpGroup .btnArea{margin-left:8px;}
+.inpGroup .btnArea,
+.inpGroup .fileUpload{margin-left:8px;}
 .searchArea .btnArea button + button{margin-left:4px;}
 .inpGroup button{min-width:100px; padding:0 26px;}
 
