@@ -6,16 +6,41 @@
 
 /* point color */
 .pColor01{color:#397fd4 !important;}
+.pColor02{color: #667d85 !important;}
 
+/* grid */
+.grid2 {display: flex;width: 100%;align-items: center;justify-content: space-between;}
+.grid2 > .gridBox {flex: 0 0 49%;width: 49%;}
+.grid2 > .gridBox + .gridBox {margin-left: 2%;}
+
+.grid3 {display: flex;width: 100%;align-items: center;justify-content: space-between;}
+.grid3 > .gridBox {flex: 0 0 32%;width: 32%;}
+.grid3 > .gridBox + .gridBox {margin-left: 2%;}
+
+.grid4 {display: flex;width: 100%;align-items: center;justify-content: space-between;}
+.grid4 > .gridBox {flex: 0 0 23.5%;width: 23.5%;}
+.grid4 > .gridBox + .gridBox {margin-left: 2%;}
+
+.grid5 {display: flex;width: 100%;align-items: center;justify-content: space-between;}
+.grid5 > .gridBox {flex: 0 0 18.4%;width: 18.4%;}
+.grid5 > .gridBox + .gridBox {margin-left: 2%;}
 
 /* row title */
 .titArea{display:flex; justify-content:space-between; align-items:center; min-height:36px;}
 .titArea .tit{font-size:24px; color:#0c323d;}
 .titArea .tit > em{margin-left:8px; font-size:15px; color:#9cacb1;}
 .titArea p {margin: 0;padding: 0;}	
+
 .titArea.type01 {display: block;text-align: center;padding: 60px 0 30px;}	
 .titArea.type01 .tit {line-height: 58px;font-size: 40px;padding-bottom: 10px;}	
 .titArea.type01 .subTit {line-height: 42px;font-size: 22px;color: #9cacb1;}
+
+.titArea.type02 {display: block;margin-bottom: 60px;text-align-last: left;}
+.titArea.type02 .titAreaPlusCon {display: flex;justify-content: space-between;}
+.titArea.type02 .titAreaPlusCon h2 {line-height: 50px;}
+.titArea.type02 p {margin-top: 8px;margin-bottom: 0;font-size: 15px;line-height: 16px;color: #667d85;}
+.titArea.type02 p.user {position: relative;padding-left: 20px;}
+.titArea.type02 p.user::before {content: '';position: absolute;top: 0px;left: 0px;display: inline-block;width: 13px;height: 15px;background: url(../assets/images/ico_user.png) no-repeat;background-size: 14px auto;background-position-x: -1px;}
 
 /* contents 바로 상단*/
 .titArea + .tpArea{margin-top:20px;}
@@ -26,6 +51,8 @@
 .layerModalWrap .listTable thead th{height:50px; font-size:15px; padding:5px;}
 .layerModalWrap .listTable tbody tr > *{height:39px; font-size:14px;}
 .layerModalWrap.rowFull .modalHeader .searchArea{width:415px;}
+.layerModalWrap .searchArea{padding:0;}
+.layerModalWrap.rowFull .modalHeader .searchArea{width:415px;}
 
 /* input 관련 */
 .unitGroup{overflow:hidden;}
@@ -33,6 +60,14 @@
 .unitGroup .unit + .unit{margin-top:30px;}
 .unitGroup .unit dt{display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;}
 .unitGroup .unit dt .tit{font-size:17px; color:#0c323d; font-weight:500;}
+.unitGroup .unit dt .inpGroup {justify-content: flex-end;}
+.unitGroup .unit dt .inpGroup .tit {margin-right: 20px;}
+.unitGroup .unit dt .listTable {flex: 0 0 100%; width: 100%;}
+.unitGroup .unit dt.flexStart {justify-content: flex-start !important;}
+.unitGroup .unit dt .tit + input {margin-left: 20px;}
+.unitGroup .unit dt .tit em {display: inline-block;margin-left: 10px;font-size: 15px;color: #a0b0b6;}
+.unitGroup .unit dt .rowTable td .inp {min-width: 200px;}
+.unitGroup .unit dt .rowTable td[colspan] .inp {width: calc(50% - 120px);}
 .unitGroup.rowGroup{display:flex; align-items:flex-end; width:100%;}
 .unitGroup.rowGroup > *{text-align:left; display:inline-flex; width:100%; flex-direction:column; padding-right:5px;}
 .unitGroup.rowGroup > *:last-child{padding:0;}
@@ -52,8 +87,8 @@
 .searchArea .btnArea,
 .inpGroup .btnArea,
 .inpGroup .fileUpload{margin-left:8px;}
-.searchArea .btnArea button + button{margin-left:4px;}
-.inpGroup button{min-width:100px; padding:0 26px;}
+.searchArea .btnArea .btn + .btn{margin-left:4px;}
+.inpGroup .btn{min-width:100px; padding:0 26px;}
 
 /* text 관련 */
 p.text{font-size:16px; line-height:20px; overflow:hidden; word-break:break-all; color:#667d85; text-align:left; margin:0 !important;}
@@ -66,3 +101,17 @@ p.infoText{font-size:14px; line-height:16px; overflow:hidden; word-break:break-a
 /* tree & table column */
 .treeTable{display:grid; grid-template-columns:39% auto; grid-column-gap:10px;}
 .treeTable .tree{border:1px solid #dddddd; height:100%; overflow-y:auto;}
+
+
+/* 5column checkbox list */
+.checkboxList{overflow:hidden;}
+.checkboxList > ul{display:grid; grid-template-columns:repeat(5, 1fr); grid-column-gap:5px; padding:0 !important;}
+.checkboxList > ul > li{margin:9px 0;}
+
+/* multiple file list */
+.fileList{overflow:hidden; margin-top:8px; padding:0 !important;}
+.fileList li{display:inline-block; font-size:15px; color:#0c323d; margin-bottom:8px; margin-right:40px;}
+.fileList li:last-child{margin-right:0px;}
+.fileList .fileDelete{width:20px; height:20px; border-radius:50%; padding:0; position:relative;}
+.fileList .fileDelete:before{content:""; display:block; width:10px; height:10px; background:url(../assets/images/ico_fileDelete.png) no-repeat 0 0; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);}
+.fileList .fileDelete > .text{font-size:0;}

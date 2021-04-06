@@ -18,7 +18,13 @@ const projectRouter = [
     path: 'project',
     name: 'ProjectList',
     title: '나의 프로젝트',
-    component: () => import('@/views/project/m2_01_01_000'),
+    component: () => import('@/views/project/m2_01_01_000')
+  },
+  {
+    path: 'project/detail',
+    name: 'ProjectDetailLayout',
+    title: '나의 프로젝트',
+    component: () => import('@/views/project/m2_layout'),
     children: [
       {
         path: 'main',

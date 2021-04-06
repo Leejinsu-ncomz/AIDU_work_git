@@ -644,7 +644,7 @@
             </div>
         </div>
 
-         <!-- 데이터 카탈로그 팝업-->
+         <!-- 데이터 카탈로그 팝업 21.04.06 추가 내용 추가-->
         <div class="layerModalWrap rowFull" v-if="modalShow === 'modal-5'">
             <div class="layerModal">
                 <div class="modalHeader">
@@ -654,6 +654,9 @@
                         <div class="btnArea">
                             <button type="button" class="btn l cBlue iconOnly search">
                                 <span class="text">검색</span>
+                            </button>
+                            <button type="button" class="btn l cGreenGray" @click="subFnOpen()">
+                                <span class="text">등록</span>
                             </button>
                         </div>
                     </div>
@@ -672,6 +675,7 @@
                                         <col />
                                         <col />
                                         <col />
+                                        <col />
                                     </colgroup>
                                     <thead>
                                         <tr>
@@ -685,6 +689,7 @@
                                             <th scope="col">데이터명</th>
                                             <th scope="col">사이즈</th>
                                             <th scope="col">다운로드</th>
+                                            <th scope="col">관리</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -699,6 +704,11 @@
                                             <td>2020년 주요생필품 가격동향</td>
                                             <td>4.3mb</td>
                                             <td>10</td>
+                                            <td>
+                                                <button type="button" class="btn xs round cGrayDark">
+                                                    <span class="text">수정</span>
+                                                </button>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
@@ -711,6 +721,11 @@
                                             <td>2020년 주요생필품 가격동향</td>
                                             <td>4.3mb</td>
                                             <td>10</td>
+                                            <td>
+                                                <button type="button" class="btn xs round cGrayDark">
+                                                    <span class="text">수정</span>
+                                                </button>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
@@ -723,6 +738,11 @@
                                             <td>2020년 주요생필품 가격동향</td>
                                             <td>4.3mb</td>
                                             <td>10</td>
+                                            <td>
+                                                <button type="button" class="btn xs round cGrayWhite">
+                                                    <span class="text">삭제</span>
+                                                </button>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
@@ -735,6 +755,11 @@
                                             <td>2020년 주요생필품 가격동향</td>
                                             <td>4.3mb</td>
                                             <td>10</td>
+                                            <td>
+                                                <button type="button" class="btn xs round cGrayWhite">
+                                                    <span class="text">삭제</span>
+                                                </button>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
@@ -747,6 +772,11 @@
                                             <td>2020년 주요생필품 가격동향</td>
                                             <td>4.3mb</td>
                                             <td>10</td>
+                                            <td>
+                                                <button type="button" class="btn xs round cGrayWhite">
+                                                    <span class="text">삭제</span>
+                                                </button>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
@@ -759,6 +789,11 @@
                                             <td>2020년 주요생필품 가격동향</td>
                                             <td>4.3mb</td>
                                             <td>10</td>
+                                            <td>
+                                                <button type="button" class="btn xs round cGrayWhite">
+                                                    <span class="text">삭제</span>
+                                                </button>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
@@ -771,6 +806,11 @@
                                             <td>2020년 주요생필품 가격동향</td>
                                             <td>4.3mb</td>
                                             <td>10</td>
+                                            <td>
+                                                <button type="button" class="btn xs round cGrayWhite">
+                                                    <span class="text">삭제</span>
+                                                </button>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -807,6 +847,179 @@
                             <span class="text">가져오기</span>
                         </button>
                         <button type="button" class="btn xl cGrayGreen" @click="fnClose">
+                            <span class="text">취소</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 데이터 카탈로그 등록 팝업 -->
+        <div class="layerModalWrap rowFull" v-if="subModalShow">
+            <div class="layerModal">
+                <div class="modalHeader">
+                    <strong>데이터 카탈로그</strong>
+                </div>
+                <div class="modalCnt">
+                    <div class="rowTable">
+                        <table>
+                            <caption>데이터 카탈로그 등록</caption>
+                            <colgroup>
+                                <col style="width:240px;"/>
+                                <col />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">카테고리<em class="bullet">*</em></th>
+                                    <td>
+                                        <select class="inp" style="min-width:340px;">
+                                            <option>추가</option>
+                                        </select>
+                                        <input type="text" class="inp" placeholder="KT" style="min-width:340px;" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">게시 대상<em class="bullet">*</em></th>
+                                    <td>
+                                        <div class="checkboxList">
+                                            <ul>
+                                                <li>
+                                                    <label class="inpField">
+                                                        <input type="checkbox" name="chk1"/>
+                                                        <span class="text">전체공개</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="inpField">
+                                                        <input type="checkbox" name="chk1"/>
+                                                        <span class="text">기업회원 공개</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="inpField">
+                                                        <input type="checkbox" name="chk1"/>
+                                                        <span class="text">일반회원 공개</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <label class="inpField">
+                                                        <input type="checkbox" name="chk2"/>
+                                                        <span class="text">테넌트A</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="inpField">
+                                                        <input type="checkbox" name="chk2"/>
+                                                        <span class="text">테넌트B</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="inpField">
+                                                        <input type="checkbox" name="chk2"/>
+                                                        <span class="text">테넌트C</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="inpField">
+                                                        <input type="checkbox" name="chk2"/>
+                                                        <span class="text">테넌트D</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="inpField">
+                                                        <input type="checkbox" name="chk2"/>
+                                                        <span class="text">테넌트E</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <label class="inpField">
+                                                        <input type="checkbox" name="chk3"/>
+                                                        <span class="text">KT</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="inpField">
+                                                        <input type="checkbox" name="chk3"/>
+                                                        <span class="text">우리금융</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="inpField">
+                                                        <input type="checkbox" name="chk3"/>
+                                                        <span class="text">한양대학교</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="inpField">
+                                                        <input type="checkbox" name="chk3"/>
+                                                        <span class="text">kt ds</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="inpField">
+                                                        <input type="checkbox" name="chk3"/>
+                                                        <span class="text">현대중공</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="inpField">
+                                                        <input type="checkbox" name="chk3"/>
+                                                        <span class="text">카이스트</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">데이터명<em class="bullet">*</em></th>
+                                    <td>                                        
+                                        <input type="text" class="inp" placeholder="AI One Team 소속 회사" style="min-width:340px;" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">파일<em class="bullet">*</em></th>
+                                    <td>
+                                        <div class="fileUpload m">
+                                            <input type="file" id="file3" multiple @change="fileMultipleChange">
+                                            <label for="file3" class="text">
+                                                <span class="text">파일 선택</span>
+                                            </label>
+                                        </div>
+                                        <ul class="fileList" ref="fileList" v-if="multipleFiles">
+                                            <li v-for="(li, index) in list" :key="index">{{li.text}}<button type="button" class="btn round cGrayDark onlyIcon fileDelete">
+                                                    <span class="text">삭제</span>
+                                                </button></li>
+                                            <!-- <li v-for="index in multipleFiles" v-bind="list" :key="index">
+                                                {{index}}
+                                                {{list[index]}}
+                                                <button type="button" class="btn round cGrayDark onlyIcon fileDelete">
+                                                    <span class="text">삭제</span>
+                                                </button>
+                                            </li> -->
+                                            <!-- <li>
+                                                sample_Data.csv
+                                                <button type="button" class="btn round cGrayDark onlyIcon fileDelete">
+                                                    <span class="text">삭제</span>
+                                                </button>
+                                            </li> -->
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modalFooter">
+                    <div class="btnArea mW">
+                        <button type="button" class="btn xl cGreen">
+                            <span class="text">등록</span>
+                        </button>
+                        <button type="button" class="btn xl cGrayGreen" @click="subFnClose">
                             <span class="text">취소</span>
                         </button>
                     </div>
@@ -915,10 +1128,12 @@
 <script>
 
 import DatePicker from '@/components/DatePicker';
+
 export default {
   name: 'App',
   data: () => ({
     modalShow: null,
+    subModalShow: false,
     buttons : [
         {
             name : '프로젝트 생성/수정',
@@ -943,6 +1158,10 @@ export default {
     fileName : '',
     from: '',
     to: '',
+    multipleFiles : false,
+    list : [{
+
+    }]
   }),
   components: {
       DatePicker
@@ -956,10 +1175,26 @@ export default {
             this.modalShow = null;
             document.body.classList.remove("modal-open");
         },
+        subFnOpen: function () {
+            this.subModalShow = true;
+        },
+        subFnClose: function () {
+            this.subModalShow = false;
+        },
         fileChange(e) {
             this.fileName = e.target.files[0].name;
         },
-        
+        fileMultipleChange(e) {
+            this.multipleFiles = true
+            if(this.list[0].name === undefined) {
+                this.list.splice(0,1);
+            }
+            for(let i = 0; i < e.target.files.length; i++) {
+                this.list.push({
+                    text : e.target.files[i].name
+                })
+            }
+        },        
         fromDate (dt) {
             this.from = dt;
         },
