@@ -70,7 +70,7 @@ table th, table td {vertical-align:middle;}
 input,textarea,button {-webkit-border-radius:0; border-radius:0;}
 strong {font-weight:500;}
 
-::-webkit-scrollbar {width:10px; height:10px;}
+::-webkit-scrollbar {width:6px; height:6px;}
 ::-webkit-scrollbar-track {background-color:#f4f4f4; border:none;  box-shadow:0;}
 ::-webkit-scrollbar-track:horizontal {border-top:1px solid #f4f4f4;}
 ::-webkit-scrollbar-thumb {background-color:#9cacb1; border-radius:0px; border:0px solid #aaa;}

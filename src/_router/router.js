@@ -1,65 +1,207 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+/* import { component } from 'vue/types/umd' */
 import Layout from '../views/layout/Layout'
+import UserLayout from '../views/layout/UserLayout'
+import Empty from '../views/layout/empty'
 
 Vue.use(Router)
 
-const portalHomeRouter = [
-  {
-    path: 'main',
-    name: 'UserHome',
-    title: 'home',
-    component: () => import('@/views/project/aiduMain')
-  }
-]
+const portalHomeRouter = [{
+  path: 'main',
+  name: 'UserHome',
+  title: 'home',
+  component: () => import('@/views/project/aiduMain')
+}]
 
-const projectRouter = [
-  {
-    path: 'project',
-    name: 'ProjectList',
-    title: '나의 프로젝트',
-    component: () => import('@/views/project/m2_01_01_000')
-  },
-  {
-    path: 'project/detail',
-    name: 'ProjectDetailLayout',
-    title: '나의 프로젝트',
-    component: () => import('@/views/project/m2_layout'),
-    children: [
-      {
-        path: 'main',
-        name: 'ProjectDetail',
-        title: '기본정보',
-        component: () => import('@/views/project/m2_02_01_000')
-      }
-    ]
-  }
-]
-const example = [
-  {
-    path: 'example',
-    name: 'example',
-    title: '예시',
-    component: () => import('@/views/example/example.vue')
-  }
-]
+const studyRouter = [{
+  path: 'study',
+  name: 'StudyLayout',
+  title: '자가학습서 목록 레이아웃',
+  component: () => import('@/views/study/m4_layout'),
+  children: [{
+      path: 'list',
+      name: 'studyList',
+      title: '자가학습서 리스트',
+      component: () => import('@/views/study/m4_01_01_000')
+    },
+    {
+      path: 'detail',
+      name: 'StudyDetail',
+      title: '자가학습서 상세',
+      component: () => import('@/views/study/m4_01_02_000')
+    },
+    {
+      path: 'edit',
+      name: 'StudyEdit',
+      title: '자가학습서 등록/수정',
+      component: () => import('@/views/study/m4_01_03_000')
+    }
+  ]
+}]
+
+const boardRouter = [{
+  path: 'board',
+  name: 'boardLayout',
+  title: '게시판',
+  component: () => import('@/views/board/m6_layout'),
+  children: [{
+      path: 'notice/list/',
+      name: 'notice',
+      title: '공시사항',
+      component: () => import('@/views/board/m6_01_01_000')
+    },
+    {
+      path: 'notice/detail/',
+      name: 'noticeDetail',
+      title: '공지사항 상세보기',
+      component: () => import('@/views/board/m6_01_02_000')
+    }
+  ]
+}]
+
+const projectRouter = [{
+  path: 'project',
+  name: 'ProjectDetailLayout',
+  title: '나의 프로젝트 레이아웃',
+  component: () => import('@/views/project/m2_layout'),
+  children: [{
+      path: 'list',
+      name: 'ProjectList',
+      title: '나의 프로젝트',
+      component: () => import('@/views/project/m2_01_01_000')
+    },
+    {
+      path: 'detail',
+      name: 'ProjectDetailLayout',
+      title: '나의 프로젝트',
+      component: () => import('@/views/project/m2_02_01_000')
+    }
+  ]
+}]
+
+const join = [{
+  path: 'term',
+  name: 'UserTerm',
+  title: '약관동의',
+  component: () => import('@/views/user/m1_01_01_000')
+}, {
+  path: 'join',
+  name: 'UserJoin',
+  title: '회원가입 선택',
+  component: () => import('@/views/user/m1_01_02_001')
+}, {
+  path: 'joinForm',
+  name: 'UserJoin',
+  title: '회원가입 선택',
+  component: () => import('@/views/user/m1_01_02_002')
+}, {
+  path: 'joinComplete',
+  name: 'UserJoinComplete',
+  title: '회원가입 완료',
+  component: () => import('@/views/user/m1_01_03_000')
+}, {
+  path: 'emailComplete',
+  name: 'UserEmailComplete',
+  title: '이메일 인증 완료 안내',
+  component: () => import('@/views/user/m9_01_03_000')
+}]
+const email = [{
+  path: '/',
+  name: 'UserEmail',
+  title: '인증안내 메일 템플릿',
+  component: () => import('@/views/email/m9_02_01_001') //이메일용 인라인
+}, {
+  path: 'emailInfo',
+  name: 'UserEmailInfo',
+  title: '회사코드 승인 안내 메일 템플릿',
+  component: () => import('@/views/email/m9_02_01_002') //이메일용 인라인
+}]
+const account = [{
+  path: 'login',
+  name: 'UserLogin',
+  title: '로그인',
+  component: () => import('@/views/user/m1_02_01_000')
+}, {
+  path: 'state',
+  name: 'UserAccountState',
+  title: '계정상태 안내',
+  component: () => import('@/views/user/m1_02_01_001')
+}, {
+  path: 'resetPassword',
+  name: 'UserResetPassword',
+  title: '비밀번호 재설정 입력',
+  component: () => import('@/views/user/m1_02_03_001'),
+}, {
+  path: 'resetPasswordComplete',
+  name: 'UserResetPasswordComplete',
+  title: '비밀번호 재설정 완료',
+  component: () => import('@/views/user/m1_02_03_002')
+}, {
+  path: 'findId',
+  name: 'UserFindId',
+  title: '아이디 찾기',
+  component: () => import('@/views/user/m1_02_02_000')
+}, {
+  path: 'findIdComplete',
+  name: 'UserFindIdComplete',
+  title: '아이디 찾기 확인',
+  component: () => import('@/views/user/m1_02_02_001')
+}, {
+  path: 'findIdUserResetPassword',
+  name: 'UserFindIdResetPassword',
+  title: '비밀번호 재설정 입력',
+  component: () => import('@/views/user/m1_02_03_000')
+}]
+//common
+// const common = [
+//   {
+//     paht: 'error',
+//     name: 'Error',
+//     title: '오류',
+//     component: () => import('@/views/??????????????')
+//   }
+// ]
+
+//example
+const example = [{
+  path: 'example',
+  name: 'Example',
+  title: '예시',
+  component: () => import('@/views/example/example.vue')
+}]
 
 export const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Layout,
-      redirect: '/main',
-      children: [
-        ...portalHomeRouter,
-        ...projectRouter,
-        ...example
-      ]
-    }
-  ]
+  routes: [{
+    path: '/',
+    name: 'home',
+    component: Layout,
+    redirect: '/main',
+    children: [
+      ...portalHomeRouter,
+      ...projectRouter,
+      ...studyRouter,
+      ...boardRouter,
+      ...example
+    ]
+  }, {
+    path: '/user',
+    name: 'user',
+    component: UserLayout,
+    children: [
+      ...account,
+      ...join
+    ]
+  }, {
+    path: '/email',
+    name: 'email',
+    component: Empty,
+    children: [
+      ...email,
+    ]
+  }]
 })
 
 export default router

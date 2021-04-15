@@ -1,26 +1,51 @@
 /* charBox */
 .chartBox {border: 1px solid #dddddd;}
 
+.amountTxt {font-size: 18px;color: #0c323d;}
+.btnArea .amountTxt {line-height: 50px;vertical-align: top;}
+
 .plusCon {display: flex;}
 .plusCon .customSelectWrap + .btnArea {margin-left: 5px;}
 
 .searchArea {padding: 0px 170px;}
+.searchArea.type02 {flex: 0 0 50%;width: 50%;padding: 0px;}
 .searchArea input.customInp {flex: 1 1 0;}
 .searchArea .btnSmall {min-width: 100px;}
 .searchArea .btnMedium {min-width: 200px;}
 
-.cusTomBoxWrap.type01 {display: flex;}
+.rowTable table + .contentTxtWrap {padding: 20px;min-height: 240px;}
+.contentTxtWrap {border-bottom: 1px solid #eeeeee;margin-bottom: 10px;}
+.contentTxtWrap .contentTxtBox span {line-height: 24px;font-size: 15px;color: #0c323d;}
 
+.titArea + .inpWrap {margin-top: 20px;}
+.inpWrap {display: flex;align-items: center;margin-bottom: 20px;}
+.inpWrap.percentW .inp {width: 100%;}
+.inpWrap .inpBox + .inpBox,
+.inpWrap .inpBox + .btnArea {margin-left: 5px;}
+.inpWrap .inpBox .inp + .fileUpload {margin-left: 5px;}
+.inpWrap .inpBox.fileUploadBox .inp {width: calc(100% - 55px);}
+.inpWrap .btnArea button + button {margin-left: 5px;}
+.inpWrap .inp {width: 240px;}
+.inpWrap .inpTit {display: block;line-height: 36px;font-size: 15px;color: #667d85;text-align: left;}
+.customOption option {color: #a0b0b6;}
+
+
+.cusTomBoxWrap.type01 {display: flex;}
 .cusTomBoxWrap.type01 .cusTomBox + .cusTomBox {padding-left: 20px;}
+.cusTomBoxWrap.type01 .cusTomBox + .cusTomBox.gridBox {padding-left: 0px;}
 .cusTomBoxWrap.type01 .cusTomBox .unitBox {width: 100%;}
 .cusTomBoxWrap.type01 .cusTomBox .unitBox ul {margin-bottom: 15px;border-top: 6px solid #ddd;border-radius: 3px;box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.2);}  
 .cusTomBoxWrap.type01 .cusTomBox.bdCGreen .unitBox ul {border-color: #2cbbb7;}
+.cusTomBoxWrap.type01 .cusTomBox.darkBdCGreen .unitBox ul {border-color: #3dae92;}
 .cusTomBoxWrap.type01 .cusTomBox.bdCBlue .unitBox ul {border-color: #499ed5;}
+.cusTomBoxWrap.type01 .cusTomBox.darkBdCBlue .unitBox ul {border-color: #397fd4;}
 .cusTomBoxWrap.type01 .cusTomBox ul {display: flex;padding-left: 0px;padding: 36px 0px;}
 .cusTomBoxWrap.type01 .cusTomBox ul li {position: relative;}
 .cusTomBoxWrap.type01 .cusTomBox ul li + li::before {content: '';display: block;position: absolute;top: 50%;left: 0px;width: 1px;height: 120px;margin-top: -60px;background: #dddddd;}
+.cusTomBoxWrap ul li {flex: 0 0  100%;width: 100%;}
 .cusTomBoxWrap .grid2 ul li {flex: 0 0 50%;width: 50%;}
 .cusTomBoxWrap .grid4 ul li {flex: 0 0 25%;width: 25%;}
+
 .cusTomBoxWrap.type01 .titArea {margin-bottom: 5px;}
 .cusTomBoxWrap.type01 .titArea .tit {line-height: 37px;font-size: 18px;color: #0c323d;font-weight: 400;}
 .cusTomBoxWrap.type01 .iconWrap .project_icon {display: inline-block;width: 40px;height: 40px;background: url(../assets/images/ico_project.png) no-repeat;background-size: 240px auto;background-position: 0 0;}
@@ -30,7 +55,151 @@
 .cusTomBoxWrap.type01 .iconWrap .project_icon.type05 {background-position: -160px 0;}
 .cusTomBoxWrap.type01 .iconWrap .project_icon.type06 {background-position: -200px 0;}
 .cusTomBoxWrap.type01 .numWrap .num {display: inline-block;padding: 7px 0px;line-height: 50px;font-size: 44px;font-weight: 600;}
-.cusTomBoxWrap.type01 .cusTomBox.bdCGreen .numWrap .num {color: #2cbbb7;}
-.cusTomBoxWrap.type01 .cusTomBox.bdCBlue .numWrap .num {color: #499ed5;}
+.cusTomBoxWrap.type01 .cusTomBox.bdCGreen .numWrap .num,
+.cusTomBoxWrap .cusTomBox.bdCGreen .chratInfo .num {color: #2cbbb7;}
+.cusTomBoxWrap.type01 .cusTomBox.darkBdCGreen .numWrap .num,
+.cusTomBoxWrap .cusTomBox.darkBdCGreen .chratInfo .num {color: #3dae92;}
+.cusTomBoxWrap.type01 .cusTomBox.bdCBlue .numWrap .num,
+.cusTomBoxWrap .cusTomBox.bdCBlue .chratInfo .num {color: #499ed5;}
+.cusTomBoxWrap.type01 .cusTomBox.darkBdCBlue .numWrap .num,
+.cusTomBoxWrap .cusTomBox.darkBdCBlue .chratInfo .num {color: #397fd4;}
 .cusTomBoxWrap.type01 .listTitWrap .listTit {line-height: 21px;font-size: 17px;color: #48656d;}
 .cusTomBoxWrap.type01 .listTitWrap .listTit em {font-size: 15px;color: #9cacb1;}
+.cusTomBoxWrap .chartWrap {margin: 15px 0px;padding: 0px 40px;}
+.cusTomBoxWrap .chratInfo {font-size: 15px;color: #0c323d;}
+.cusTomBoxWrap .chratInfo .num {font-size: 30px;}
+.cusTomBoxWrap .chratInfo em {color: #9cacb1;}
+
+.sorceViewTitWrap {height: 50px;line-height: 50px;font-size: 15px;color: #667d85;text-align: left;}
+.sorceViewWrap {height: 500px;overflow-y: auto;}
+
+.containSubInfoWrap {position: absolute;bottom: 0;left: 0;display: flex;align-items: center;justify-content: center;width: 100%;padding: 15px 0px;background: #f4f4f4;}
+.containSubInfoWrap .subInfoTxt {display: inline-block;margin-right: 20px;font-size: 14px;color: #397fd4;}
+
+.tpArea + .flexBox {margin-top: 10px;}
+.flexBox {display: flex;align-items: center;}
+.unitBox.w100p .flexBox {width: 1320px;margin: 0 auto;}
+.flexBox.justifyContent {justify-content: space-between;}
+.flexBox.flexEnd {justify-content: flex-end;}
+.flexBox.tableButtonWrap {padding: 0px 15px;}
+
+.titArea + .listSelctWrap {margin-top: 5px;}
+.listSelctWrap .w33p {width: 33.3% !important;}
+.listSelctWrap ul.listSelets {display: flex;padding-left: 0px;}
+.listSelctWrap ul li {display: flex;align-items: center;justify-content: center;padding: 40px 50px;border: 1px solid #dddddd;cursor: pointer;}
+.listSelctWrap ul li {border-right-width: 0px;}
+.listSelctWrap ul li:last-child {border-right-width: 1px;}
+.listSelctWrap ul li .imgBox {margin-right: 40px;}
+.listSelctWrap ul li .selcteInfoBox > * {display: block;text-align: left;}
+.listSelctWrap ul li .selcteInfoBox .tit {line-height: 44px;font-size: 25px;font-weight: 600;color: #0c323d;}
+.listSelctWrap ul li .selcteInfoBox .tit em {font-size: 18px;color: #2cbbb7;font-style: italic;font-weight: 500;}
+.listSelctWrap ul li .selcteInfoBox .txt {line-height: 24px;font-size: 15px;color: #667d85;letter-spacing: -1px;}
+
+.listSelctWrap.type02 ul li {padding-top: 20px;padding-bottom: 30px;}
+.listSelctWrap.type02 ul li {display: list-item;}
+.listSelctWrap.type02 .selcteInfoBox .tit {margin-bottom: 20px;text-align: center;}
+.listSelctWrap.type02 .selcteInfoBox .txtWrap {display: flex;align-items: center;justify-content: space-between;}
+.listSelctWrap.type02 .selcteInfoBox .txtWrap .txt {display: flex;align-items: center;justify-content: center;width: 50%;flex: 0 0 50%;color: #0c323d;}
+.listSelctWrap.type02 .selcteInfoBox .txtWrap .txt + .txt {position: relative;}
+.listSelctWrap.type02 .selcteInfoBox .txtWrap .txt + .txt::before {content: '';position: absolute;top: 50%;left: 0px;width: 2px;height: 14px;margin-top: -7px;background: #dddddd;}
+.listSelctWrap.type02 .selcteInfoBox .txtWrap .txt em {color: #667d85;}
+.listSelctWrap.type02 .selcteInfoBox .txtWrap .txt em.num {display: inline-block;margin-left: 10px;line-height: 40px;font-size: 32px;color: #898989;}
+
+.listSelctWrap ul li.active {border: 2px solid #2cbbb7;}
+.listSelctWrap ul li.active:last-child {border-right-width: 2px;}
+.listSelctWrap ul li.active .selcteInfoBox .txtWrap .txt em.num {color: #3dae92;}
+.listSelctWrap ul li.active .selcteInfoBox .txtWrap .txt + .txt em.num {color: #397fd4;}
+
+.logContainer .logBox {overflow-y: auto;padding: 30px;}
+.logContainer .logBox .logTxt {display: block;color: #ffffff;font-size: 14px;text-align-last: left;}
+
+/* Aidu List */
+.aiduList ul {padding-left: 0px !important;}
+.aiduList .aiduListWrap {display: flex;align-items: center;}
+.aiduList .aiduListWrap .imgBox {display: flex;flex: 0 0 200px;width: 200px;align-items: center;justify-content: center;}
+.aiduList .aiduListWrap .imgBox img {width: 100%;}
+.aiduList .aiduListWrap .contentBox {flex: 0 0 calc(100% - 200px);width: calc(100% - 200px);padding-left: 30px;}
+.aiduList .aiduListWrap .contentBox .titWrap {display: flex;align-items: center;justify-content: space-between;}
+.aiduList .aiduListWrap .contentBox .titWrap .tit {display: inline-block;overflow: hidden;width: calc(100% - 100px);font-weight: 500;text-align: left;color: #0c323d;white-space: nowrap;text-overflow: ellipsis;}
+.aiduList .aiduListWrap .contentBox .hashTagWrap ul {display: flex;align-items: center;justify-content: flex-start;}
+.aiduList .aiduListWrap .contentBox .hashTagWrap ul li + li {margin-left: 10px;}
+.aiduList .aiduListWrap .contentBox .hashTagWrap ul li a {position: relative;display: inline-block;line-height: 20px;color: #b2c2c7;}
+.aiduList .aiduListWrap .contentBox .hashTagWrap ul li a:after {content: '';display: block;position: absolute;bottom: 0;left: 0;width: 100%;height: 1px;background: #b2c2c7;}
+.aiduList .aiduListWrap .contentBox .subInfoWrap {display: flex;align-items: center;}
+.aiduList .aiduListWrap .contentBox .subInfoWrap .subInfo {display: inline-flex;align-items: center;}
+.aiduList .aiduListWrap .contentBox .subInfoWrap .subInfo.user {margin-right: 80px;margin-left: -6px;}
+.aiduList .aiduListWrap .contentBox .subInfoWrap .subInfo.user span {font-size: 17px;color: #667d85;}
+.aiduList .aiduListWrap .contentBox .subInfoWrap .subInfo span {font-size: 16px;color: #48656d;}
+.aiduList .aiduListWrap .contentBox .subInfoWrap .subInfo:not(.user) span {margin: 0px 10px;}
+.aiduList .aiduListWrap .contentBox .otherWrap {display: flex;align-items: center;justify-content: space-between;}
+.aiduList .aiduListWrap .contentBox .otherWrap .dateWrap span {position: relative;display: inline-block;font-size: 16px;color: #9cacb1;}
+.aiduList .aiduListWrap .contentBox .otherWrap .dateWrap span + span {padding-left: 20px;}
+.aiduList .aiduListWrap .contentBox .otherWrap .dateWrap span + span::before {content: '';display: block;position: absolute;top: 50%;left: 11px;width: 1px;height: 10px;margin-top: -5px;background: #c9d1d3;}
+
+.aiduList.type01 ul li {padding: 20px;border-bottom: 1px solid #dddddd;}
+.aiduList.type01 .aiduListWrap .contentBox {padding-right: 20px;}
+.aiduList.type01 .aiduListWrap .contentBox .titWrap .tit {line-height: 30px;font-size: 25px;}
+.aiduList.type01 .aiduListWrap .contentBox .subInfoWrap {padding: 10px 0px;justify-content: flex-start;}
+.aiduList.type01 .aiduListWrap .contentBox .otherWrap {margin-top: 15px;padding: 10px 0px;}
+
+.aiduList.type02 .aiduListWrap .contentBox .titWrap .tit {font-size: 30px;line-height: 48px;}
+.aiduList.type02 .aiduListWrap .contentBox .badgeWrap {margin-top: 10px;padding: 4px 0px;text-align: left;}
+.aiduList.type02 .aiduListWrap .contentBox .otherWrap {margin-top: 30px;padding: 8px 0px;}
+
+/* Favorites button */
+.favoritesBtn {display: inline-block;width: 30px;height: 30px;background: url('../assets/images/ico_favorites.png') no-repeat;background-size: 60px auto;background-position: 0 0;}
+.favoritesBtn.active {background-position: -30px 0;}
+.likelyBtn {display: inline-block;width: 30px;height: 30px;background: url('../assets/images/ico_likely.png') no-repeat;background-size: 60px auto;background-position: 0 0;}
+.likelyBtn.active,
+.favoritesBtn.active {background-position: -30px 0;}
+.likelyBtn + .favoritesBtn {margin-left: 10px;}
+/* sub info Icon */
+.subIcon {display: inline-block;width: 30px;height: 30px;background: url('../assets/images/ico_subInfo.png') no-repeat;background-size: 120px auto;}
+.subIcon.type01 {background-position: 0 0;}
+.subIcon.type02 {background-position: -30px 0;}
+.subIcon.type03 {background-position: -60px 0;}
+.subIcon.type04 {background-position: -90px 0;}
+
+/* model badge */
+.modelBadge {display: inline-block;padding: 0px 20px;line-height: 32px;font-size: 15px;border-radius: 16px;}
+.modelBadge + .modelBadge {margin-left: 5px;}
+.modelBadge.type01 {background: #fff4e1;color: #f8a510;} 
+.modelBadge.type02 {background: #ebf2fa;color: #397fd4;}
+.modelBadge.type03 {background: #ebf5f4;color: #3dae92;}
+.modelBadge.type04 {background: #f7f1f8;color: #a956cc;}
+.modelBadge.type05 {background: #feeded;color: #e36464;}
+.modelBadge.type06 {background: #edf5eb;color: #58a049;}
+.modelBadge.type07 {background: #eeedfa;color: #6464bb;}
+.modelBadge.type08 {background: #f4f4f4;color: #8e8d8d;}
+
+/* Comment */
+.commentWrap .commentTitWrap {text-align: left;}
+.commentWrap .commentTitWrap .tit {line-height: 26px;font-size: 18px;font-weight: 500;color: #0c323d;}
+.commentWrap .commentWriteWrap {display: flex;align-items: center;justify-content: space-between;padding: 10px 0px;}
+.commentWrap .commentWriteWrap button {width: 100px;height: 80px;margin-left: 5px;line-height: 80px;font-size: 17px;}
+.commentWrap .commentWriteWrap textarea {flex: 0 0 calc(100% - 105px);width: calc(100% - 105px);}
+.commentWrap .commentConWrap {padding: 10px 0px;border-bottom: 1px solid #eeeeee;}
+.commentWrap .commentConWrap.recomment {position: relative;padding-left: 50px;}
+.commentWrap .commentConWrap.recomment:before {content: '';position: absolute;top: 24px;left: 16px;display: block;width: 20px;height: 20px;background: url(../assets/images/ico_recomment.png) no-repeat center;}
+.commentWrap .commentConWrap .userInfoArea {display: flex;align-items: center;justify-content: space-between;}
+.commentWrap .commentConWrap .userInfoArea .userInfo {display: flex;align-items: center;}
+.commentWrap .commentConWrap .userInfoArea .userInfo .userIcon {display: inline-block;width: 60px;height: 60px;margin-right: 10px;background: url(../assets/images/ico_user_type02.png) no-repeat;background-size: 60px auto;}
+.commentWrap .commentConWrap .userInfoArea .userInfo span {line-height: 30px;}
+.commentWrap .commentConWrap .userInfoArea .userInfo .name {display: inline-block;margin-right: 40px;font-size: 17px;color: #0c323d;font-weight: 500;}
+.commentWrap .commentConWrap .userInfoArea .userInfo .date {display: inline-block;font-size: 15px;color: #9cacb1;}
+.commentWrap .commentConWrap .btnArea button {min-width: 100px;}
+.commentWrap .commentConWrap .contentArea {padding: 10px 0px;text-align: left;}
+.commentWrap .commentConWrap .contentArea span {display: inline-block;line-height: 24px;font-size: 15px;color: #667d85;}
+
+/* file progress bar */
+.fileProBarWrap {position: relative;width: 100px;height: 6px;overflow: hidden;background: #e7f0f0;border-radius: 3px;}
+.fileProBarWrap .progressBar {position: absolute;top: 0;left: 0;width: 0%;height: 6px;background: #2cbbb7;transition: all ease-in-out 0.3s;}
+
+/* talbe file */
+.fileUpload + .fileName {display: inline-block;max-width: 400px;overflow: hidden;padding: 0px 10px;font-size: 15px;color: #667d85;white-space: nowrap;text-overflow: ellipsis;}
+.fileAlertTxt {display: inline-block;line-height: 20px;font-size: 14px;color: #397fd4;}
+.tableFileList ul {padding-left: 0px !important;}
+.tableFileList ul li {display: flex;align-items: center;}
+.tableFileList ul li .fileIcon {display: inline-block;width: 18px;height: 30px;background: url(../assets/images/ico_file.png) no-repeat left center;}
+.tableFileList ul li .fileName {line-height: 30px;margin-right: 10px;}
+.tableFileList ul li .fileDelBtn {display: inline-block;width: 30px;height: 30px;background: url(../assets/images/ico_fileDel.png) no-repeat center;}

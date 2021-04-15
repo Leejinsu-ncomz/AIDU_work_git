@@ -1,8 +1,11 @@
 <template>
   <div class="nczWrap">    
       <Header></Header>
-      <main class="contentContainer">
+      <main ref="content_container" class="contentContainer">
         <router-view/>
+        <div class="scrollTopBtnWrap">
+          <button class="scrollTopBtn" @click="fnScrollTop"></button>
+        </div>
       </main>
       <Footer></Footer>
   </div>
@@ -18,6 +21,14 @@ export default {
   components: {
     Header,
     Footer
+  },
+  methods: {
+    fnScrollTop() {
+      window.scroll({
+          top: 0,
+          behavior: 'smooth'
+      });
+    }
   }
 }
 </script>
