@@ -31,16 +31,19 @@
 /* row title */
 .titArea{display:flex; justify-content:space-between; align-items:center; min-height:36px;}
 .titArea .tit{font-size:24px; color:#0c323d;}
+.titArea .tit.l {font-size: 30px;font-weight: 500;}
 .titArea .tit > em{margin-left:8px; font-size:15px; color:#9cacb1;}
+.titArea .tit.l > em {font-size: 18px;}
 .titArea p {margin: 0;padding: 0;}	
+
+.titArea .titAreaPlusCon {display: flex;justify-content: space-between;}
+.titArea .titAreaPlusCon h2 {line-height: 50px;}
 
 .titArea.type01 {display: block;text-align: center;padding: 60px 0 30px;}	
 .titArea.type01 .tit {line-height: 58px;font-size: 40px;padding-bottom: 10px;}	
 .titArea.type01 .subTit {margin-bottom: 0px;line-height: 42px;font-size: 22px;color: #9cacb1;}
 
-.titArea.type02 {display: block;margin-bottom: 60px;text-align-last: left;}
-.titArea.type02 .titAreaPlusCon {display: flex;justify-content: space-between;}
-.titArea.type02 .titAreaPlusCon h2 {line-height: 50px;}
+.titArea.type02 {display: block;margin-bottom: 60px;text-align: left;}
 .titArea.type02 p {margin-top: 8px;margin-bottom: 0;font-size: 15px;line-height: 16px;color: #667d85;}
 .titArea.type02 p.user {position: relative;padding-left: 20px;}
 .titArea.type02 p.user::before {content: '';position: absolute;top: 0px;left: 0px;display: inline-block;width: 13px;height: 15px;background: url(../assets/images/ico_user.png) no-repeat;background-size: 14px auto;background-position-x: -1px;}
@@ -73,6 +76,8 @@
 .unitGroup .unit dt .rowTable td .inp {min-width: 200px;}
 .unitGroup .unit dt .rowTable td[colspan] .inp {width: calc(50% - 120px);}
 .unitGroup .unit dd + dd{margin-top:10px;}
+.unitGroup .unit dd .v-input {width: 48%;}
+.unitGroup .unit dd .term {display: inline-block;width: 4%;text-align: center;font-size: 16px;color: #0c323d;}
 .unitGroup.rowGroup{display:flex; align-items:flex-end; width:100%;}
 .unitGroup.rowGroup > *{text-align:left; display:inline-flex; width:100%; flex-direction:column; padding-right:5px;}
 .unitGroup.rowGroup > *:last-child{padding:0;}
@@ -92,13 +97,13 @@
 .inpGroup > *{display:inline-flex;}
 .searchArea .btnArea,
 .inpGroup .btnArea,
-.inpGroup .fileUpload{margin-left:8px;}
+.inpGroup input + .fileUpload {margin-left:8px;}
 .searchArea .btnArea .btn + .btn{margin-left:4px;}
 .inpGroup .btn{min-width:100px; padding:0 26px;}
 
 /* text 관련 */
 p.text{font-size:16px; line-height:20px; overflow:hidden; word-break:break-all; color:#667d85; text-align:left; margin:0 !important;}
-p.fileText{display:inline; font-size:15px;}
+p.fileText{display:inline-flex;align-items: center;font-size:15px;}
 p.infoText{font-size:14px; line-height:16px; overflow:hidden; word-break:break-all; color:#9cacb1; text-align:left; margin:14px 0 0 0 !important;}
 
 /* image 관련 */
@@ -108,6 +113,7 @@ p.infoText{font-size:14px; line-height:16px; overflow:hidden; word-break:break-a
 .treeTable{display:grid; grid-template-columns:39% auto; grid-column-gap:10px;}
 .treeTable .tree{border:1px solid #dddddd; height:100%; overflow-y:auto;}
 .treeTable .treeHeader {display: flex;height: 50px;padding: 0px 20px;align-items: center;border: 1px solid #dddddd;border-bottom: 0px;}
+.treeTable .overflowAuto {overflow-x: auto;}
 
 /* 5column checkbox list */
 .checkboxList{overflow:hidden;}

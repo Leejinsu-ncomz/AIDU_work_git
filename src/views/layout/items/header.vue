@@ -5,9 +5,16 @@
             <GNB @sub_menu_show_bg="subMenuBgShowData"></GNB>
             <div class="loginJoinWrap">
               <span class="userName">홍길동</span>
-              <button type="button" class="subUserInfo_btn"><span class="hiddenTxt">유저 세부 정보 버튼</span></button>
+              <button type="button" v-bind:class="['subUserInfo_btn', {up: userInfo}]" @click="userInfo = !userInfo"><span class="hiddenTxt">유저 세부 정보 버튼</span></button>
               <i class="userIcon"><span class="hiddenTxt">유저 아이콘</span></i>
-            </div>
+              <!-- 210422 추가 -->
+              <div v-if="userInfo" class="loginJoinInfoBox">
+                <ul>
+                  <li><a href="javascript:void(0)" class="active">사용자 모드</a></li>
+                  <li><a href="javascript:void(0)">관리자 모드</a></li>
+                </ul>
+              </div>
+            </div>            
         </div>
         <div v-bind:class="['subMenuBg', {show: subMenuShow}]"><span class="hiddenTxt">서브 메뉴 배경</span></div>
     </div>
@@ -18,7 +25,8 @@ import GNB from './gnb'
 export default {
   name: 'Header',
   data: () => ({
-    subMenuShow: false
+    subMenuShow: false,
+    userInfo: false
   }),
   components: {
     GNB

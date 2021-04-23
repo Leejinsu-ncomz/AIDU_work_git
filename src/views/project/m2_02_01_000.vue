@@ -177,15 +177,18 @@
                             </colgroup>
                             <thead>
                                 <tr>
+                                    <!-- 기본 210423  -->
+                                    <!-- <button type="button" class="sortBtn"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button> -->
                                     <!-- 내림차순 버튼 -->
                                     <!-- <button type="button" class="sortBtn descending"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button> -->
                                     <!-- 오름차순 버튼 -->
                                     <!-- <button type="button" class="sortBtn ascending"><i class="sortIcon"><span class="hiddenTxt">오름차순 아이콘</span></i></button> -->
                                     <th scope="col">NO.</th>
-                                    <th scope="col">이름<button type="button" class="sortBtn descending"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
-                                    <th scope="col">이메일<button type="button" class="sortBtn descending"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
+                                    <!-- 210423 버튼안에 텍스트를 넣어주세요 -->
+                                    <th scope="col"><button type="button" class="sortBtn">이름<i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
+                                    <th scope="col"><button type="button" class="sortBtn descending">이메일<i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
                                     <th scope="col">닉네임</th>
-                                    <th scope="col">등록일<button type="button" class="sortBtn descending"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
+                                    <th scope="col"><button type="button" class="sortBtn descending">등록일<i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
                                     <th scope="col">관리</th>
                                 </tr>
                             </thead>
@@ -246,7 +249,16 @@
                         </div>
                     </div>
                     <div class="tpArea">
-                        <span class="tit pColor01">my_project/data/</span>
+                        <!-- 210422 수정 -->
+                        <span class="tit pColor01">
+                            <ul class="directory">
+                                <li class="fileTit">파일경로:</li>
+                                <li><a href="javascript:void(0);">my</a></li>
+                                <li><a href="javascript:void(0);">project</a></li>
+                                <li><a href="javascript:void(0);">member</a></li>
+                                <li><a href="javascript:void(0);">data</a></li>
+                            </ul>
+                        </span>                        
                     </div>
                     <div class="listTable">
                         <table>
@@ -269,9 +281,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><label class="inpField"><input type="checkbox"><span class="text"></span></label></td>
-                                    <td class="txtLeft">my_project/data/제주도 공기질 데이터를 통한 미세먼지 예측모델.xlsx</td>
+                                <!-- 210423 체크박스 선택시 배경색 효과를 주실려면 tr태그에 active 클래스를 추가해주세요 -->
+                                <tr class="active">
+                                    <td><label class="inpField"><input type="checkbox" checked><span class="text"></span></label></td>
+                                    <td class="txtLeft">
+                                        <!-- 210422 편집 모드 추가 -->
+                                        <input type="text" class="inp w100p" value="my_project/data/제주도 공기질 데이터를 통한 미세먼지 예측모델.xlsx">
+                                    </td>
                                     <td>
                                         <button type="button" class="btn icoDirectory edit"><span class="text">이름 바꾸기</span></button>
                                         <button type="button" class="btn icoDirectory delete" @click="fnOpen('modal-9')"><span class="text">삭제</span></button>
@@ -320,14 +336,24 @@
                     <div class="titArea">
                         <div class="tit">소스Viewer<em>프로젝트 멤버가 작성한 소스를 확인 할 수 있습니다.</em></div>
                         <div class="btnArea">
-                            <button type="button" class="btn textBtn hasIcon code"><span class="text">코드생성</span></button>
-                            <button type="button" class="btn textBtn hasIcon sourceEdit"><span class="text">소스편집</span></button>
-                            <button type="button" class="btn textBtn hasIcon sourceSave"><span class="text">소스저장</span></button>
-                            <button type="button" class="btn textBtn hasIcon sourceCopy"><span class="text">소스복사</span></button>
+                            <!-- 210423 버튼에 disabled 속성 추가시 css로 disabled 효과 처리 -->
+                            <button type="button" class="btn textBtn hasIcon code" disabled><span class="text">코드생성</span></button>
+                            <button type="button" class="btn textBtn hasIcon sourceEdit" disabled><span class="text">소스편집</span></button>
+                            <button type="button" class="btn textBtn hasIcon sourceSave" disabled><span class="text">소스저장</span></button>
+                            <button type="button" class="btn textBtn hasIcon sourceCopy" disabled><span class="text">소스복사</span></button>
                         </div>
                     </div>
-                    <div class="tpArea">
-                        <span class="tit pColor01">my_project/data/</span>
+                    <div class="tpArea">                        
+                        <!-- 210422 수정 -->
+                        <span class="tit pColor01">
+                            <ul class="directory">
+                                <li class="fileTit">파일경로:</li>
+                                <li><a href="javascript:void(0);">my</a></li>
+                                <li><a href="javascript:void(0);">project</a></li>
+                                <li><a href="javascript:void(0);">member</a></li>
+                                <li><a href="javascript:void(0);">data</a></li>
+                            </ul>
+                        </span> 
                     </div>
                     <div class="treeTable">
                         <div>
@@ -358,20 +384,21 @@
                                             <td>2021-03-08 19:54:21</td>
                                         </tr>
                                         <!-- subDepth에 open클래스 추가해주시면 열립니다. -->
-                                        <tr class="subDepth open">
+                                        <!-- 210423 체크박스 선택시 배경색 효과를 주실려면 tr태그에 active 클래스 추가해주세요 -->
+                                        <tr class="subDepth open active">
                                             <td>
+                                                <!-- 210422 아래의 label 태그처럼 작성해주시면 말줄임 처리가 가능합니다. -->
                                                 <label for="treeCheckBox01" class="inpField"><input type="checkbox" id="treeCheckBox01"><span class="text txtEllipse">App.py</span></label>
                                                 <button type="button" class="btn icoDirectory preview"><span class="text">미리보기</span></button>
-                                                <button type="button" class="btn icoDirectory copy"><span class="text">복사</span></button>
+                                                <button type="button" class="btn icoDirectory copy" @click="fnOpen('modal-99')"><span class="text">복사</span></button>
                                             </td>
                                             <td>400MB</td>
                                             <td>2021-03-08 19:54:21</td>
                                         </tr>
                                         <tr class="subDepth open">
                                             <td>
-                                                <label for="treeCheckBox02" class="inpField"><input type="checkbox" id="treeCheckBox02"><span class="text txtEllipse">App.py</span></label>
-                                                <button type="button" class="btn icoDirectory preview"><span class="text">미리보기</span></button>
-                                                <button type="button" class="btn icoDirectory copy"><span class="text">복사</span></button>
+                                                <!-- 210422 말줄임 필요시 아래와 같이 사용해주세요 -->
+                                                <span class="text txtEllipse">App.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.pyApp.py</span>
                                             </td>
                                             <td>400MB</td>
                                             <td>2021-03-08 19:54:21</td>
@@ -380,7 +407,7 @@
                                             <td>
                                                 <label for="treeCheckBox03" class="inpField"><input type="checkbox" id="treeCheckBox03"><span class="text txtEllipse">App.py</span></label>
                                                 <button type="button" class="btn icoDirectory preview"><span class="text">미리보기</span></button>
-                                                <button type="button" class="btn icoDirectory copy"><span class="text">복사</span></button>
+                                                <button type="button" class="btn icoDirectory copy" @click="fnOpen('modal-99')"><span class="text">복사</span></button>
                                             </td>
                                             <td>400MB</td>
                                             <td>2021-03-08 19:54:21</td>
@@ -389,7 +416,7 @@
                                             <td>
                                                 <label for="treeCheckBox04" class="inpField"><input type="checkbox" id="treeCheckBox04"><span class="text txtEllipse">App.py</span></label>
                                                 <button type="button" class="btn icoDirectory preview"><span class="text">미리보기</span></button>
-                                                <button type="button" class="btn icoDirectory copy"><span class="text">복사</span></button>
+                                                <button type="button" class="btn icoDirectory copy" @click="fnOpen('modal-99')"><span class="text">복사</span></button>
                                             </td>
                                             <td>400MB</td>
                                             <td>2021-03-08 19:54:21</td>
@@ -402,7 +429,7 @@
                                             <td>
                                                 <label for="treeCheckBox05" class="inpField"><input type="checkbox" id="treeCheckBox05"><span class="text txtEllipse">App.py</span></label>
                                                 <button type="button" class="btn icoDirectory preview"><span class="text">미리보기</span></button>
-                                                <button type="button" class="btn icoDirectory copy"><span class="text">복사</span></button>
+                                                <button type="button" class="btn icoDirectory copy" @click="fnOpen('modal-99')"><span class="text">복사</span></button>
                                             </td>
                                             <td>400MB</td>
                                             <td>2021-03-08 19:54:21</td>
@@ -411,10 +438,11 @@
                                 </table>
                             </div>
                         </div>
-                        <div>
+                        <!-- 210423 아래와 같이 클래스 추가해주세요 -->
+                        <div class="overflowAuto">
                             <div class="sorceViewWrap">
                                 <!-- 실제 개발시 style을 제거 해주세요. -->
-                                <div class="sorceView" style="background: #f1f1f1; height: 1000px;"></div>
+                                <div class="sorceView" style="background: #f1f1f1;width: 5000px;height: 1000px;"></div>
                             </div>
                         </div>
                     </div>
@@ -529,26 +557,32 @@
                             <div class="titArea">
                                 <div class="tit lightBold">개발도구 선택</div>
                             </div>
+                            <!-- 210422 수정 라디오 버튼으로 구조 수정 -->
                             <div class="listSelctWrap type01">
                                 <ul class="listSelets">
-                                    <!-- active 클래스 추가시 선택 효과가 나타납니다. -->
-                                    <li class="w50p active">
-                                        <div class="imgBox">
-                                            <img :src="require(`@/assets/images/ico_jupyter.png`)" alt="Jupyter hub 이미지">
-                                        </div>
-                                        <div class="selcteInfoBox">
-                                            <span class="tit">Jupyter hub</span>
-                                            <span class="txt">Python을 활용한 소스 코드 기반의 AI 모델링을 지원합니다.</span>
-                                        </div>
+                                    <li class="w50p">
+                                        <input type="radio" id="radio_05" name="radio03" class="inpHidden">
+                                        <label class="selcteInfoBox" for="radio_05">
+                                            <div class="imgBox">
+                                                <img :src="require(`@/assets/images/ico_jupyter.png`)" alt="Jupyter hub 이미지">
+                                            </div>
+                                            <div class="txtBox">
+                                                <span class="tit">Jupyter hub</span>
+                                                <span class="txt">Python을 활용한 소스 코드 기반의 AI 모델링을 지원합니다.</span>
+                                            </div>
+                                        </label>
                                     </li>
                                     <li class="w50p">
-                                        <div class="imgBox">
-                                            <img :src="require(`@/assets/images/ico_l_aidu.png`)" alt="AIDU ez 이미지">
-                                        </div>
-                                        <div class="selcteInfoBox">
-                                            <span class="tit">AIDU ez</span>
-                                            <span class="txt">AI 개발 역량이 없어도 클릭 기반의 AI 모델링을 지원합니다.</span>
-                                        </div>
+                                        <input type="radio" id="radio_06" name="radio03" class="inpHidden">                                                                                
+                                        <label class="selcteInfoBox" for="radio_06">
+                                            <div class="imgBox">
+                                                <img :src="require(`@/assets/images/ico_l_aidu.png`)" alt="AIDU ez 이미지">
+                                            </div>
+                                            <div class="txtBox">
+                                                <span class="tit">AIDU ez</span>
+                                                <span class="txt">AI 개발 역량이 없어도 클릭 기반의 AI 모델링을 지원합니다.</span>
+                                            </div>
+                                        </label>
                                     </li>
                                 </ul>
                             </div>
@@ -559,33 +593,35 @@
                             </div>
                             <div class="listSelctWrap type02">
                                 <ul class="listSelets">
-                                    <!-- active 클래스 추가시 선택 효과가 나타납니다. -->
-                                    <li class="w33p active">
-                                        <div class="selcteInfoBox">
+                                    <li class="w33p">
+                                        <input type="radio" id="radio_07" name="radio04" class="inpHidden">                                                                                
+                                        <label for="radio_07" class="selcteInfoBox">
                                             <span class="tit">Basic</span>
                                             <div class="txtWrap">
                                                 <span class="txt">CPU<em>(Core)</em><em class="num">1</em></span>
                                                 <span class="txt">Memory<em>(GB)</em><em class="num">2</em></span>
                                             </div>
-                                        </div>
+                                        </label>
                                     </li>
                                     <li class="w33p">
-                                        <div class="selcteInfoBox">
+                                        <input type="radio" id="radio_08" name="radio04" class="inpHidden">
+                                        <label for="radio_08" class="selcteInfoBox">
                                             <span class="tit">Normal</span>
                                             <div class="txtWrap">
                                                 <span class="txt">CPU<em>(Core)</em><em class="num">2</em></span>
                                                 <span class="txt">Memory<em>(GB)</em><em class="num">4</em></span>
                                             </div>
-                                        </div>
+                                        </label>
                                     </li>
                                     <li class="w33p">
-                                        <div class="selcteInfoBox">
+                                        <input type="radio" id="radio_09" name="radio04" class="inpHidden">
+                                        <label for="radio_09" class="selcteInfoBox">
                                             <span class="tit">Super</span>
                                             <div class="txtWrap">
                                                 <span class="txt">CPU<em>(Core)</em><em class="num">4</em></span>
                                                 <span class="txt">Memory<em>(GB)</em><em class="num">16</em></span>
                                             </div>
-                                        </div>
+                                        </label>
                                     </li>
                                 </ul>
                             </div>
@@ -596,15 +632,17 @@
                             </div>
                             <div class="listSelctWrap type01">
                                 <ul class="listSelets">
-                                    <!-- active 클래스 추가시 선택 효과가 나타납니다. -->
                                     <li class="w100p active">
-                                        <div class="imgBox">
-                                            <img :src="require(`@/assets/images/ico_l_Tensorflow.png`)" alt="Tensor Flow 이미지">
-                                        </div>
-                                        <div class="selcteInfoBox">
-                                            <span class="tit">Tensorflow 2.2.1 <em>with</em> JupyterLab</span>
-                                            <span class="txt">Jupyterlab을 이용해 tensorflow 기반의 학습코드 개발 환경</span>
-                                        </div>
+                                        <input type="radio" id="radio_10" name="radio05" class="inpHidden">
+                                        <label for="radio_10" class="selcteInfoBox">                                            
+                                            <div class="imgBox">
+                                                <img :src="require(`@/assets/images/ico_l_Tensorflow.png`)" alt="Tensor Flow 이미지">
+                                            </div>
+                                            <div class="txtBox">
+                                                <span class="tit">Tensorflow 2.2.1 <em>with</em> JupyterLab</span>
+                                                <span class="txt">Jupyterlab을 이용해 tensorflow 기반의 학습코드 개발 환경</span>
+                                            </div>
+                                        </label>
                                     </li>
                                 </ul>
                             </div>
@@ -671,15 +709,18 @@
                                     <col />
                                 </colgroup>
                                 <thead>
-                                    <tr>                                        
+                                    <tr>
+                                        <!-- 기본 210423  -->
+                                        <!-- <button type="button" class="sortBtn"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button> -->                                        
                                         <!-- 내림차순 버튼 -->
                                         <!-- <button type="button" class="sortBtn descending"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button> -->
                                         <!-- 오름차순 버튼 -->
                                         <!-- <button type="button" class="sortBtn ascending"><i class="sortIcon"><span class="hiddenTxt">오름차순 아이콘</span></i></button> -->
-                                        <th scope="col">작업ID<button type="button" class="sortBtn descending"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
-                                        <th scope="col">학습작업명<button type="button" class="sortBtn descending"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
-                                        <th scope="col">등록자<button type="button" class="sortBtn descending"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
-                                        <th scope="col">상태<button type="button" class="sortBtn descending"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
+                                        <!-- 210423 버튼안에 텍스트를 넣어주세요 -->
+                                        <th scope="col"><button type="button" class="sortBtn">작업ID<i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
+                                        <th scope="col"><button type="button" class="sortBtn descending">학습작업명<i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
+                                        <th scope="col"><button type="button" class="sortBtn descending">등록자<i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
+                                        <th scope="col"><button type="button" class="sortBtn descending">상태<i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
                                         <th scope="col">시작시간</th>
                                         <th scope="col">소요시간</th>
                                         <th scope="col">Accuracy/Loss</th>
@@ -769,34 +810,37 @@
                                 <div class="tit lightBold">자원 설정 <em>(사용가능 시간 : 00h)</em></div>
                             </div>
                             <div class="listSelctWrap type02">
-                                <ul class="listSelets">
-                                    <!-- active 클래스 추가시 선택 효과가 나타납니다. -->
-                                    <li class="w33p active">
-                                        <div class="selcteInfoBox">
+                                <ul class="listSelets">                                                                        
+                                    <!-- 210422 수정 라디오 버튼으로 구조 수정 -->
+                                    <li class="w33p">
+                                        <input type="radio" id="radio_01" name="radio" class="inpHidden" checked>
+                                        <label class="selcteInfoBox" for="radio_01">
                                             <span class="tit">Basic</span>
                                             <div class="txtWrap">
                                                 <span class="txt">CPU<em>(Core)</em><em class="num">1</em></span>
                                                 <span class="txt">Memory<em>(GB)</em><em class="num">2</em></span>
                                             </div>
-                                        </div>
+                                        </label>
                                     </li>
                                     <li class="w33p">
-                                        <div class="selcteInfoBox">
+                                        <input type="radio" id="radio_02" name="radio" class="inpHidden">
+                                        <label class="selcteInfoBox" for="radio_02">
                                             <span class="tit">Normal</span>
                                             <div class="txtWrap">
                                                 <span class="txt">CPU<em>(Core)</em><em class="num">2</em></span>
                                                 <span class="txt">Memory<em>(GB)</em><em class="num">4</em></span>
                                             </div>
-                                        </div>
+                                        </label>
                                     </li>
                                     <li class="w33p">
-                                        <div class="selcteInfoBox">
+                                        <input type="radio" id="radio_03" name="radio" class="inpHidden">
+                                        <label class="selcteInfoBox" for="radio_03">
                                             <span class="tit">Super</span>
                                             <div class="txtWrap">
                                                 <span class="txt">CPU<em>(Core)</em><em class="num">4</em></span>
                                                 <span class="txt">Memory<em>(GB)</em><em class="num">16</em></span>
                                             </div>
-                                        </div>
+                                        </label>
                                     </li>
                                 </ul>
                             </div>
@@ -809,13 +853,16 @@
                                 <ul class="listSelets">
                                     <!-- active 클래스 추가시 선택 효과가 나타납니다. -->
                                     <li class="w100p active">
-                                        <div class="imgBox">
-                                            <img :src="require(`@/assets/images/ico_l_Tensorflow.png`)" alt="Tensor Flow 이미지">
-                                        </div>
-                                        <div class="selcteInfoBox">
-                                            <span class="tit">Tensorflow 2.2.1 <em>+</em> Keras 2.3 <em>+</em> Scikit-Learn 0.23</span>
-                                            <span class="txt">Tensorflow 2를 기반으로 AI모델 학습 환경</span>
-                                        </div>
+                                        <input type="radio" id="radio_04" name="radio_02" class="inpHidden">
+                                        <label class="selcteInfoBox" for="radio_04">
+                                            <div class="imgBox">
+                                                <img :src="require(`@/assets/images/ico_l_Tensorflow.png`)" alt="Tensor Flow 이미지">
+                                            </div>
+                                            <div class="txtBox">
+                                                <span class="tit">Tensorflow 2.2.1 <em>+</em> Keras 2.3 <em>+</em> Scikit-Learn 0.23</span>
+                                                <span class="txt">Tensorflow 2를 기반으로 AI모델 학습 환경</span>
+                                            </div>
+                                        </label>
                                     </li>
                                 </ul>
                             </div>
@@ -887,7 +934,7 @@
                                 </div>
                                 <div class="tabContainer" v-if="tabShow2[0].active">
                                     <div class="logContainer">
-                                        <div class="logBox" style="height: 324px; background: #2b2b2b">
+                                        <div class="logBox" style="width: 3000px;">
                                             <span class="logTxt">Defalut log Defalut log Defalut log Defalut log Defalut log Defalut log Defalut log</span>
                                             <span class="logTxt">Defalut log Defalut log Defalut log Defalut log Defalut log Defalut log Defalut log</span>
                                             <span class="logTxt">Defalut log Defalut log Defalut log Defalut log Defalut log Defalut log Defalut log</span>
@@ -913,7 +960,7 @@
                                 </div>
                                 <div class="tabContainer" v-if="tabShow2[1].active">
                                     <div class="logContainer">
-                                        <div class="logBox" style="height: 324px; background: #2b2b2b">
+                                        <div class="logBox">
                                             <span class="logTxt">Show log Show log Show log Show log Show log Show log Show log</span>
                                             <span class="logTxt">Show log Show log Show log Show log Show log Show log Show log</span>
                                             <span class="logTxt">Show log Show log Show log Show log Show log Show log Show log</span>
@@ -1071,8 +1118,9 @@
                                             <button class="btn l cBlue iconOnly add"><span class="text">추가</span></button>
                                         </div>
                                     </div>
-                                </div>
-                                <div>
+                                </div>                                
+                                <!-- 210423 아래와 같이 클래스 추가해주세요 -->
+                                <div class="overflowAuto">
                                     <div class="sorceViewTitWrap flexBox justifyContent">
                                         <span class="tit">Response</span>
                                         <div class="btnArea">
@@ -1081,7 +1129,7 @@
                                     </div>
                                     <div class="sorceViewWrap">                                    
                                         <!-- 실제 개발시 style을 제거 해주세요. -->
-                                        <div class="sorceView" style="background: #f1f1f1; height: 1000px;"></div>
+                                        <div class="sorceView" style="background: #f1f1f1;width:5000px;height: 1000px;"></div>
                                     </div>
                                 </div>
                             </div>
@@ -1169,21 +1217,22 @@
                                     </tr>
                                     <tr>
                                         <th scope="row">썸네일</th>
+                                        <!-- 210423 구조 변경 -->
                                         <td>
-                                            <span class="inpGroup">
-                                                <input
-                                                type="text"
-                                                class="inp"
-                                                placeholder="파일을 선택해주세요."
-                                                v-bind:value="fileName"
-                                                />
+                                            <span class="tableFileUpWrap">
                                                 <span class="fileUpload m">
-                                                <input type="file" id="file" @change="fileChange" />
-                                                <label class="text" for="file">
-                                                    <span class="text">파일 선택</span>
-                                                </label>
+                                                    <input type="file" id="file" @change="tableFileChange($event, 0)" />
+                                                    <label class="text" for="file">
+                                                        <span class="text">파일 선택</span>
+                                                    </label>
                                                 </span>
+                                                <span class="fileName">{{ file[0].fileName }} {{ file[0].fileSize }}</span>                                        
+                                                <span class="fileProBarWrap" v-if="file[0].progress">
+                                                    <span class="progressBar" v-bind:style="'width: ' + file[0].progressPer + '%'"></span>
+                                                </span>
+                                                <button type="button" class="btn round cGrayDark onlyIcon fileDelete" v-if="file[0].delBtn"><span class="text">삭제</span></button>                                    
                                             </span>
+                                            <span class="fileAlertTxt">※ 썸네일 이미지 미등록시, 모델 유형에 따른 기본이미지가 표기되며, 이미지 파일만 등록 가능합니다.</span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -1893,18 +1942,19 @@
                         <div class="tree" style="height: 405px;">
                             <!-- treeWrap에 open 클래스가 있으면 열립니다. -->
                             <ul class="treeWrap open">
-                                <li>
+                                <!-- 210422 class active 추가해주시면 선택 효과가 나타납니다. -->
+                                <li class="active">
                                     <button type="button" class="treeBtn">데이터 구분</button>
                                     <ul class="treeWrap open">
                                         <li>
                                             <button class="treeBtn">공공행정</button>
                                             <ul class="treeWrap open">
-                                                <li>
+                                                <li class="active">
                                                     <button class="treeBtn">3depth</button>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li>
+                                        <li class="active">
                                             <button class="treeBtn">공공행정</button>
                                             <ul class="treeWrap">
                                                 <li>
@@ -1936,6 +1986,8 @@
                                     </colgroup>
                                     <thead>
                                         <tr>
+                                            <!-- 기본 210423  -->
+                                            <!-- <button type="button" class="sortBtn"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button> -->
                                             <!-- 내림차순 버튼 -->
                                             <!-- <button type="button" class="sortBtn descending"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button> -->
                                             <!-- 오름차순 버튼 -->
@@ -1946,10 +1998,11 @@
                                                     <span class="text">checkbox all</span>
                                                 </label>
                                             </th>
-                                            <th scope="col">포맷<button type="button" class="sortBtn descending"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
-                                            <th scope="col">데이터명<button type="button" class="sortBtn descending"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
-                                            <th scope="col">사이즈<button type="button" class="sortBtn descending"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
-                                            <th scope="col">다운로드<button type="button" class="sortBtn descending"><i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
+                                            <!-- 210423 버튼안에 텍스트를 넣어주세요 -->
+                                            <th scope="col"><button type="button" class="sortBtn">포맷<i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
+                                            <th scope="col"><button type="button" class="sortBtn descending">데이터명<i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
+                                            <th scope="col"><button type="button" class="sortBtn descending">사이즈<i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
+                                            <th scope="col"><button type="button" class="sortBtn descending">다운로드<i class="sortIcon"><span class="hiddenTxt">내림차순 아이콘</span></i></button></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -2453,7 +2506,13 @@
                                 <div class="w60p">
                                     <div class="inpGroup">
                                         <span class="tit pColor02 light">대상 컬럼</span>
-                                        <input type="text" placeholder="최대 3개까지 선택 가능합니다." class="inp l" style="width: 412px;">
+                                        <!-- 210422 수정 -->
+                                        <div class="inpBtnWrap" style="width: 412px;">
+                                            <span class="placeHolder">최대 3개까지 선택 가능합니다.</span>
+                                            <v-chip class="btn m round cBlue round">데이터</v-chip>
+                                            <v-chip class="btn m round cBlue round">데이터</v-chip>
+                                            <v-chip class="btn m round cBlue round">데이터</v-chip>
+                                        </div>                                        
                                         <div class="btnArea">
                                             <button type="button" class="btn l cWhiteGreen">
                                                 <span class="text">시각화</span>
@@ -3670,13 +3729,14 @@
                     <dt>
                         <span class="tit">템플릿 등록</span>
                         <div>
-                        <p class="fileText pColor01 mgR20">{{ fileName }}</p>
-                        <div class="fileUpload">
-                            <input type="file" id="file2" @change="fileChange" />
-                            <label class="text" for="file2">
-                            <span class="text">파일 선택</span>
-                            </label>
-                        </div>
+                            <!-- 210423 삭제 버튼 추가 -->
+                            <p class="fileText pColor01 mgR20">{{ fileName }}<a v-if="fileName != ''" href="javascript:void(0);" class="btn round cGrayDark onlyIcon fileDelete"><span class="text">삭제</span></a></p>                            
+                            <div class="fileUpload">
+                                <input type="file" id="file2" @change="fileChange" />
+                                <label class="text" for="file2">
+                                <span class="text">파일 선택</span>
+                                </label>
+                            </div>
                         </div>
                     </dt>
                     <dd>
@@ -3701,6 +3761,62 @@
                 </div>
             </div>
         </div>
+        <!-- 소스 Viewer 복사 팝업 -->
+        
+        <div class="layerModalWrap" v-if="modalShow === 'modal-99'">            
+            <div class="layerModal">
+                <div class="modalHeader">
+                    <strong class="txtCenter">저장 경로 선택</strong>
+                </div>
+                <div class="modalCnt">
+                    <div class="tpArea">
+                        <span class="tit pColor01">
+                            <ul class="directory">
+                                <li class="fileTit">파일경로:</li>
+                                <li>my</li>
+                                <li>project</li>
+                                <li>member</li>
+                                <li>data</li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="listTable">
+                        <table>
+                            <colgroup>
+                                <col style="width: 50%;">
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>디렉토리/파일명</th>
+                                    <th>크기</th>
+                                    <th>수정일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <!-- 정렬 클래스 기본은 가운데 정렬 입니다. 왼쪽 정렬 txtLeft 오른쪽 정렬 txtRight 가운데 정렬 txtCenter -->
+                                    <td class="txtLeft">lris</td>
+                                    <td class="txtRight">4096</td>
+                                    <td>2021-04-23</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modalFooter">
+                    <div class="btnArea">
+                        <button type="button" class="btn l cGreen" @click="fnClose">
+                            <span class="text">선택</span>
+                        </button>
+                        <button type="button" class="btn l cGrayGreen" @click="fnClose">
+                            <span class="text">취소</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </div>
 </template>
 
@@ -3730,6 +3846,16 @@ export default {
         list : [{
 
         }],
+        /* 210423 file 데이터 추가 */
+        file: [
+            {
+                fileName: "선택된 파일 없음",
+                fileSize: "",
+                progress: false,
+                progressPer: 0,
+                delBtn: false
+            }
+        ],
         tabShow: [
             {
                 active: true
@@ -3822,6 +3948,22 @@ export default {
     },
     fileChange(e) {
         this.fileName = e.target.files[0].name;
+    },
+    /* 210423 추가 tableFileChange 함수 추가 */
+    tableFileChange(e, index) {// eslint-disable-line no-unused-vars
+        this.file[index].fileName = e.target.files[0].name;
+        this.file[index].fileSize = '(' + e.target.files[0].size + ')';
+        this.file[index].progress = true;
+        
+        setTimeout(() => {
+            this.file[index].progressPer = 100;                
+        }, 200);
+        
+        setTimeout(() => {
+            this.file[index].progress = false;
+            this.file[index].delBtn = true;
+            //css로 인해 1초 지연
+        }, 1200);            
     },
     fileMultipleChange(e) {
         this.multipleFiles = true

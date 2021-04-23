@@ -8,15 +8,9 @@
                 </ul>
             </div>
         </div>
-        <div class="unitBox">
-            <div class="flexBox justifyContent tableButtonWrap">
-                <div class="btnArea">
-                    <button type="button" class="btn textBtn hasIcon temporarySave" style="padding-left: 0px;" @click="fnOpen('modal-1')"><span class="text">임시저장</span></button>
-                </div>
-                <div class="btnArea">
-                    <button type="button" class="btn textBtn hasIcon cancel"><span class="text">취소</span></button>
-                    <button type="button" class="btn textBtn hasIcon enrollment" @click="fnOpen('modal-2')"><span class="text">등록</span></button>
-                </div>
+        <div class="unitBox">                        
+            <div class="titArea">
+                <h2 class="tit l">자가학습서<em>AIDU활용한 다양한 사례를 학습해보세요.</em></h2>
             </div>
             <div class="rowTable">
                 <table>
@@ -67,35 +61,18 @@
                         <tr>
                             <th scope="row">썸네일</th>
                             <td>
-                                <span class="inpGroup">
-                                    <input
-                                    type="text"
-                                    class="inp m"
-                                    placeholder="파일을 선택해주세요."
-                                    v-bind:value="fileName"
-                                    />
+                                <span class="tableFileUpWrap">
                                     <span class="fileUpload m">
-                                        <input type="file" id="file" @change="tableFileChange" />
+                                        <input type="file" id="file" @change="tableFileChange($event, 0)" />
                                         <label class="text" for="file">
                                             <span class="text">파일 선택</span>
                                         </label>
                                     </span>
-                                    <span class="fileName">
-                                        <span v-if="!fileListWrap">선택된 파일 없음</span>
-                                        <span v-if="fileListWrap">{{ fileName }}{{ fileSize }}</span>
+                                    <span class="fileName">{{ file[0].fileName }} {{ file[0].fileSize }}</span>                                        
+                                    <span class="fileProBarWrap" v-if="file[0].progress">
+                                        <span class="progressBar" v-bind:style="'width: ' + file[0].progressPer + '%'"></span>
                                     </span>
-                                    <!-- <span class="fileProBarWrap">
-                                        <span class="progressBar" v-bind:style="'width: ' + progressPer + '%'"></span>
-                                    </span> -->
-                                </span>
-                                <span class="tableFileList" v-if="fileListWrap">
-                                    <ul>
-                                        <li>
-                                            <i class="fileIcon"><div class="hiddenTxt">파일아이콘</div></i>
-                                            <span class="fileName">{{ fileName }}{{ fileSize }}</span>
-                                            <button class="fileDelBtn"><span class="hiddenTxt">파일 삭제 아이콘</span></button>
-                                        </li>
-                                    </ul>
+                                    <button type="button" class="btn round cGrayDark onlyIcon fileDelete" v-if="file[0].delBtn"><span class="text">삭제</span></button>                                    
                                 </span>
                                 <span class="fileAlertTxt">※ 썸네일 이미지 미등록시, 모델 유형에 따른 기본이미지가 표기되며, 이미지 파일만 등록 가능합니다.</span>
                             </td>
@@ -103,35 +80,18 @@
                         <tr>
                             <th scope="row">첨부파일</th>
                             <td>
-                                <span class="inpGroup">
-                                    <input
-                                    type="text"
-                                    class="inp m"
-                                    placeholder="파일을 선택해주세요."
-                                    v-bind:value="fileName2"
-                                    />
+                                <span class="tableFileUpWrap">
                                     <span class="fileUpload m">
-                                        <input type="file" id="file2" @change="tableFileChange2" />
+                                        <input type="file" id="file2" @change="tableFileChange($event, 1)" />
                                         <label class="text" for="file2">
                                             <span class="text">파일 선택</span>
                                         </label>
                                     </span>
-                                    <span class="fileName">
-                                        <span v-if="!fileListWrap2">선택된 파일 없음</span>
-                                        <span v-if="fileListWrap2">{{ fileName2 }}{{ fileSize2 }}</span>
+                                    <span class="fileName">{{ file[1].fileName }} {{ file[1].fileSize }}</span>                                        
+                                    <span class="fileProBarWrap" v-if="file[1].progress">
+                                        <span class="progressBar" v-bind:style="'width: ' + file[1].progressPer + '%'"></span>
                                     </span>
-                                    <span class="fileProBarWrap">
-                                        <span class="progressBar" v-bind:style="'width: ' + progressPer2 + '%'"></span>
-                                    </span>
-                                </span>
-                                <span class="tableFileList" v-if="fileListWrap2">
-                                    <ul>
-                                        <li>
-                                            <i class="fileIcon"><div class="hiddenTxt">파일아이콘</div></i>
-                                            <span class="fileName">{{ fileName2 }}{{ fileSize2 }}</span>
-                                            <button class="fileDelBtn"><span class="hiddenTxt">파일 삭제 아이콘</span></button>
-                                        </li>
-                                    </ul>
+                                    <button type="button" class="btn round cGrayDark onlyIcon fileDelete" v-if="file[1].delBtn"><span class="text">삭제</span></button>                                    
                                 </span>
                             </td>
                         </tr>
@@ -170,6 +130,11 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="btnArea mgT10 txtRight rowBoxBtnArea">
+                <button class="btn l cGrayGreen w100px" @click="fnOpen('modal-1')"><span class="text">임시저장</span></button>
+                <router-link tag="button" to="/study/detail" class="btn l cGrayGreen w100px"><span class="text">취소</span></router-link>
+                <button class="btn l cGreen w100px" @click="fnOpen('modal-2')"><span class="text">자가학습서 등록</span></button>
             </div>
         </div> 
         <!-- 임시저장 알럿/컨펌 팝업 -->
@@ -221,14 +186,21 @@
 export default {
     data: () => ({
         modalShow: '',
-        fileName: "",
-        fileName2: "",
-        fileSize: "",
-        fileSize2: "",
-        fileListWrap: false,
-        fileListWrap2: false,
-        progressPer: 0,
-        list: [{}]
+        file: [
+            {
+                fileName: "선택된 파일 없음",
+                fileSize: "",
+                progress: false,
+                progressPer: 0,
+                delBtn: false
+            },{
+                fileName: "선택된 파일 없음",
+                fileSize: "",
+                progress: false,
+                progressPer: 0,
+                delBtn: false
+            }
+        ]
     }),
     methods: {
         fnOpen: function (id) {
@@ -240,17 +212,21 @@ export default {
             this.modalShow = null;
             document.body.classList.remove("modal-open");
         },
-        tableFileChange(e) {
-            this.fileListWrap = true;
-            this.progressPer = 100;
-            this.fileName = e.target.files[0].name; 
-            this.fileSize = '(' + e.target.files[0].size + ')';
-        },
-        tableFileChange2(e) {
-            this.fileListWrap2 = true;
-            this.progressPer2 = 100;
-            this.fileName2 = e.target.files[0].name; 
-            this.fileSize2= '(' + e.target.files[0].size + ')';
+        tableFileChange(e, index) {// eslint-disable-line no-unused-vars
+            console.log(index)
+            this.file[index].fileName = e.target.files[0].name;
+            this.file[index].fileSize = '(' + e.target.files[0].size + ')';
+            this.file[index].progress = true;
+            
+            setTimeout(() => {
+                this.file[index].progressPer = 100;                
+            }, 200);
+            
+            setTimeout(() => {
+                this.file[index].progress = false;
+                this.file[index].delBtn = true;
+                //css로 인해 1초 지연
+            }, 1200);            
         }
     }
 }

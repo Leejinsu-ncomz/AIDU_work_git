@@ -17,7 +17,7 @@
 .inpGrid > .inp + .inp{margin-top:10px;}
 
 /* 계정 상태 */
-.userWrap.accountConfirm .cntBox:before{content:""; display:block; width:160px; height:90px; background:; margin:0 auto 40px;}
+.userWrap.accountConfirm .cntBox:before{content:""; display:block; width:160px; height:90px; margin:0 auto 40px;}
 .userWrap.accountConfirm.complete .cntBox:before{background:url(../assets/images/ico_joinComplete.png) no-repeat 0 0; background-size:100%;}
 .userWrap.accountConfirm.password .cntBox:before{background:url(../assets/images/ico_userPassword.png) no-repeat 0 0; background-size:100%;}
 .userWrap.accountConfirm.security .cntBox:before{background:url(../assets/images/ico_userSecurity.png) no-repeat 0 0; background-size:100%;}

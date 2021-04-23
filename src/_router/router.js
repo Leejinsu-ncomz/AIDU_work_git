@@ -14,6 +14,26 @@ const portalHomeRouter = [{
   component: () => import('@/views/project/aiduMain')
 }]
 
+const projectRouter = [{
+  path: 'project',
+  name: 'ProjectDetailLayout',
+  title: '나의 프로젝트 레이아웃',
+  component: () => import('@/views/project/m2_layout'),
+  children: [{
+      path: 'list',
+      name: 'ProjectList',
+      title: '나의 프로젝트',
+      component: () => import('@/views/project/m2_01_01_000')
+    },
+    {
+      path: 'detail',
+      name: 'ProjectDetailLayout',
+      title: '나의 프로젝트',
+      component: () => import('@/views/project/m2_02_01_000')
+    }
+  ]
+}]
+
 const studyRouter = [{
   path: 'study',
   name: 'StudyLayout',
@@ -40,6 +60,26 @@ const studyRouter = [{
   ]
 }]
 
+const catalogRouter = [{
+  path: 'catalog',
+  name: 'catalogLayout',
+  title: '공유모델 레이아웃',
+  component: () => import('@/views/catalog/m5_layout'),
+  children: [{
+      path: 'list',
+      name: 'catalogList',
+      title: '공유모델 목록',
+      component: () => import('@/views/catalog/m5_01_01_000')
+    },
+    {
+      path: 'detail',
+      name: 'catalogDetail',
+      title: '공유모델 상세보기',
+      component: () => import('@/views/catalog/m5_02_01_000')
+    }
+  ]
+}]
+
 const boardRouter = [{
   path: 'board',
   name: 'boardLayout',
@@ -56,29 +96,47 @@ const boardRouter = [{
       name: 'noticeDetail',
       title: '공지사항 상세보기',
       component: () => import('@/views/board/m6_01_02_000')
+    },
+    {
+      path: 'qna/list/',
+      name: 'Q&AList',
+      title: 'Q&A',
+      component: () => import('@/views/board/m6_02_01_000')
+    },
+    {
+      path: 'qna/detail/',
+      name: 'Q&ADetail',
+      title: 'Q&A 상세보기',
+      component: () => import('@/views/board/m6_02_02_000')
+    },
+    {
+      path: 'qna/edit/',
+      name: 'Q&AEdit',
+      title: 'Q&A 등록/수정',
+      component: () => import('@/views/board/m6_02_03_000')
+    },
+    {
+      path: 'free/list/',
+      name: 'freeList',
+      title: '자유게시판',
+      component: () => import('@/views/board/m6_03_01_000')
+    },
+    {
+      path: 'free/detail/',
+      name: 'freeDetail',
+      title: '자유게시판 상세보기',
+      component: () => import('@/views/board/m6_03_02_000')
+    },
+    {
+      path: 'free/edit/',
+      name: 'freeEdit',
+      title: '자유게시판 등록/수정',
+      component: () => import('@/views/board/m6_03_03_000')
     }
   ]
 }]
 
-const projectRouter = [{
-  path: 'project',
-  name: 'ProjectDetailLayout',
-  title: '나의 프로젝트 레이아웃',
-  component: () => import('@/views/project/m2_layout'),
-  children: [{
-      path: 'list',
-      name: 'ProjectList',
-      title: '나의 프로젝트',
-      component: () => import('@/views/project/m2_01_01_000')
-    },
-    {
-      path: 'detail',
-      name: 'ProjectDetailLayout',
-      title: '나의 프로젝트',
-      component: () => import('@/views/project/m2_02_01_000')
-    }
-  ]
-}]
+
 
 const join = [{
   path: 'term',
@@ -153,6 +211,13 @@ const account = [{
   title: '비밀번호 재설정 입력',
   component: () => import('@/views/user/m1_02_03_000')
 }]
+
+const error = [{
+  path: '/error',
+  name: 'errorPage',
+  title: '에러페이지',
+  component: () => import('@/views/error/m9_01_02_000')
+}]
 //common
 // const common = [
 //   {
@@ -183,6 +248,7 @@ export const router = new Router({
       ...portalHomeRouter,
       ...projectRouter,
       ...studyRouter,
+      ...catalogRouter,
       ...boardRouter,
       ...example
     ]
@@ -193,6 +259,13 @@ export const router = new Router({
     children: [
       ...account,
       ...join
+    ]
+  }, {
+    path: '/',
+    name: 'error',
+    component: UserLayout,
+    children: [
+      ...error
     ]
   }, {
     path: '/email',

@@ -44,13 +44,13 @@
             <div class="aiduList type01">
                 <ul>
                     <li>
-                        <router-link to="detail" class="aiduListWrap">
+                        <div class="aiduListWrap">
                             <div class="imgBox">
                                 <img :src="require(`@/assets/images/ico_userMessage.png`)" alt="예시 이미지" />
                             </div>
                             <div class="contentBox">
                                 <div class="titWrap">
-                                    <span class="tit">제주도 공기질 데이터를 통한 미세먼지 예측 모델 제주도 공기질 데이터를 통한 미세먼지 예측 모델 제주도 공기질 데이터를 통한 미세먼지 예측 모델 제주도 공기질 데이터를 통한 미세먼지 예측 모델</span>
+                                    <router-link to="detail" class="tit">제주도 공기질 데이터를 통한 미세먼지 예측 모델 제주도 공기질 데이터를 통한 미세먼지 예측 모델 제주도 공기질 데이터를 통한 미세먼지 예측 모델 제주도 공기질 데이터를 통한 미세먼지 예측 모델</router-link>
                                     <!-- active 클래스 추가시 클릭 효과가 나탑납니다. -->
                                     <button class="favoritesBtn active"><span class="hiddenTxt">즐겨찾기 버튼</span></button>
                                 </div>
@@ -82,16 +82,16 @@
                                     </div>
                                 </div>
                             </div>
-                        </router-link>
+                        </div>
                     </li>
                     <li>
-                        <router-link to="detail" class="aiduListWrap">
+                        <div class="aiduListWrap">
                             <div class="imgBox">
                                 <img :src="require(`@/assets/images/footer_logo.png`)" alt="예시 이미지" />
                             </div>
                             <div class="contentBox">
                                 <div class="titWrap">
-                                    <span class="tit">제주도 공기질 데이터를 통한 미세먼지 예측 모델</span>
+                                    <router-link to="detail" class="tit">제주도 공기질 데이터를 통한 미세먼지 예측 모델</router-link>
                                     <button class="favoritesBtn"><span class="hiddenTxt">즐겨찾기 버튼</span></button>
                                 </div>
                                 <div class="subInfoWrap">
@@ -122,16 +122,16 @@
                                     </div>
                                 </div>
                             </div>
-                        </router-link>
+                        </div>
                     </li>
                     <li>
-                        <router-link to="detail" class="aiduListWrap">
+                        <div class="aiduListWrap">
                             <div class="imgBox">
                                 <img :src="require(`@/assets/images/ico_project.png`)" alt="예시 이미지" />
                             </div>
                             <div class="contentBox">
                                 <div class="titWrap">
-                                    <span class="tit">제주도 공기질 데이터를 통한 미세먼지 예측 모델</span>
+                                    <router-link to="detail" class="tit">제주도 공기질 데이터를 통한 미세먼지 예측 모델</router-link>
                                     <button class="favoritesBtn"><span class="hiddenTxt">즐겨찾기 버튼</span></button>
                                 </div>
                                 <div class="subInfoWrap">
@@ -162,16 +162,16 @@
                                     </div>
                                 </div>
                             </div>
-                        </router-link>
+                        </div>
                     </li>
                     <li>
-                        <a href="javascript:void(0);" class="aiduListWrap" @click="fnOpen('modal-1')">
+                        <div class="aiduListWrap">
                             <div class="imgBox">
                                 <img :src="require(`@/assets/images/logo.png`)" alt="예시 이미지" />
                             </div>
                             <div class="contentBox">
                                 <div class="titWrap">
-                                    <span class="tit">제주도 공기질 데이터를 통한 미세먼지 예측 모델</span>
+                                    <a href="javascript:void(0);" @click="fnOpen('modal-1')" class="tit">제주도 공기질 데이터를 통한 미세먼지 예측 모델</a>
                                     <button class="favoritesBtn"><span class="hiddenTxt">즐겨찾기 버튼</span></button>
                                 </div>
                                 <div class="subInfoWrap">
@@ -202,7 +202,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </li>
                 </ul>
             </div>

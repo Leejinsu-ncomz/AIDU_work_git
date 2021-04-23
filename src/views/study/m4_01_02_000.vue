@@ -9,64 +9,62 @@
             </div>
         </div>
         <div class="unitBox">
-            <div class="aiduList type02">
-                <ul>
-                    <li>
-                        <div class="aiduListWrap">
-                            <div class="imgBox">
-                                <img :src="require(`@/assets/images/ico_userMessage.png`)" alt="예시 이미지" />
-                            </div>
-                            <div class="contentBox">
-                                <div class="badgeWrap">
-                                    <span class="modelBadge type01">이상탐지</span>
-                                    <span class="modelBadge type02">군집</span>
-                                </div>
-                                <div class="titWrap">
-                                    <span class="tit">제주도 공기질 데이터를 통한 미세먼지 예측 모델 제주도 공기질 데이터를 통한 미세먼지 예측 모델 제주도 공기질 데이터를 통한 미세먼지 예측 모델 제주도 공기질 데이터를 통한 미세먼지 예측 모델</span>
-                                    <!-- active 클래스 추가시 클릭 효과가 나탑납니다. -->
-                                    <div class="btnArea">
-                                        <button class="likelyBtn active"><span class="hiddenTxt">좋아요 버튼</span></button>
-                                        <button class="favoritesBtn active"><span class="hiddenTxt">즐겨찾기 버튼</span></button>
-                                    </div>
-                                </div>
-                                <div class="hashTagWrap">
-                                    <ul>
-                                        <li><a href="javascript:void(0)">#test</a></li>
-                                        <li><a href="javascript:void(0)">#jeju</a></li>
-                                        <li><a href="javascript:void(0)">#air data</a></li>
-                                        <li><a href="javascript:void(0)">#fine dust</a></li>
-                                        <li><a href="javascript:void(0)">#expectation</a></li>
-                                        <li><a href="javascript:void(0)">#model</a></li>
-                                    </ul>
-                                </div>
-                                <div class="otherWrap">                                    
-                                    <div class="subInfoWrap">
-                                        <span class="subInfo user">
-                                            <i class="subIcon type01"><span class="hiddenTxt">유저아이콘</span></i>
-                                            <span class="listSubTxt">홍길*</span>
-                                        </span>
-                                        <span class="subInfo">
-                                            <i class="subIcon type02"><span class="hiddenTxt">조회수아이콘</span></i>
-                                            <span class="listSubTxt">215</span>
-                                        </span>                                    
-                                        <span class="subInfo">
-                                            <i class="subIcon type03"><span class="hiddenTxt">좋아요아이콘</span></i>
-                                            <span class="listSubTxt">100</span>
-                                        </span>
-                                        <span class="subInfo">
-                                            <i class="subIcon type04"><span class="hiddenTxt">댓글아이콘</span></i>
-                                            <span class="listSubTxt">55</span>
-                                        </span>
-                                    </div>                                    
-                                    <div class="dateWrap">
-                                        <span class="date">2021-02-20</span>
-                                        <span>개발도구 : Jupyterlab</span>
-                                    </div>
-                                </div>
+            <div class="aiduListdetail">
+                <div class="detailWrap">
+                    <div class="imgBox">
+                        <img :src="require(`@/assets/images/ico_userMessage.png`)" alt="예시 이미지" />
+                    </div>
+                    <div class="contentBox">
+                        <div class="badgeWrap">
+                            <span class="modelBadge type01">이상탐지</span>
+                            <span class="modelBadge type02">군집</span>
+                        </div>
+                        <div class="titWrap">
+                            <span class="tit">제주도 공기질 데이터를 통한 미세먼지 예측 모델 제주도 공기질 데이터를 통한 미세먼지 예측 모델 제주도 공기질 데이터를 통한 미세먼지 예측 모델 제주도 공기질 데이터를 통한 미세먼지 예측 모델</span>
+                            <!-- active 클래스 추가시 클릭 효과가 나탑납니다. -->
+                            <div class="btnArea">
+                                <button class="likelyBtn active"><span class="hiddenTxt">좋아요 버튼</span></button>
+                                <button class="favoritesBtn active"><span class="hiddenTxt">즐겨찾기 버튼</span></button>
                             </div>
                         </div>
-                    </li>
-                </ul>
+                        <div class="detailInfoWrap">
+                            <div class="userInfo">
+                                <i class="subIcon type01"><span class="hiddenTxt">유저아이콘</span></i>
+                                <span class="contentInfoTxt">홍길*</span>
+                            </div>
+                            <div class="contentInfoWrap">
+                                <span class="contentInfo">
+                                    <i class="subIcon type02"><span class="hiddenTxt">조회수아이콘</span></i>
+                                    <span class="contentInfoTxt">215</span>
+                                </span>                                    
+                                <span class="contentInfo">
+                                    <i class="subIcon type03"><span class="hiddenTxt">좋아요아이콘</span></i>
+                                    <span class="contentInfoTxt">100</span>
+                                </span>
+                                <span class="contentInfo">
+                                    <i class="subIcon type04"><span class="hiddenTxt">댓글아이콘</span></i>
+                                    <span class="contentInfoTxt">55</span>
+                                </span>
+                            </div>
+                            <div class="develInfo">
+                                <span class="contentInfoTxt">개발도구 : Jupyterlab</span>
+                            </div>
+                        </div>
+                        <div class="otherWrap mgT30">
+                            <ul class="hashTagWrap">
+                                <li><a href="javascript:void(0)">#test</a></li>
+                                <li><a href="javascript:void(0)">#jeju</a></li>
+                                <li><a href="javascript:void(0)">#air data</a></li>
+                                <li><a href="javascript:void(0)">#fine dust</a></li>
+                                <li><a href="javascript:void(0)">#expectation</a></li>
+                                <li><a href="javascript:void(0)">#model</a></li>
+                            </ul>                                    
+                            <div class="dateWrap">
+                                <span class="date">2021-02-20</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="rowTable">
                 <table>
@@ -98,11 +96,11 @@
                         <span class="contentTxt">여기서 사용할 칼럼만 뽑자면 아래와 같다.<br>통계 산출 시간 : 시간별 통계값을 구분하기 위함<br>측정장비위치 코드 : 여러 장비를 위치별로 구분하기 위함<br>데이터종류 코드 : 공기질 데이터는 총 5가지로 온도, 습도, 미세먼지, 초미세먼지, 소음의 값을 가진다. 이들을 구별하기 위함<br>평균값 : 5분 사이에 이상치가 섞여 있을 수 있으므로 이를 피하기 위함</span>
                     </div>
                 </div>
-                <div class="btnArea flexBox flexEnd tableButtonWrap">
-                    <router-link tag="button" to="edit" class="btn textBtn hasIcon sourceEdit"><span class="text">수정</span></router-link>
-                    <button type="button" class="btn textBtn hasIcon cancel" @click="fnOpen('modal-1')"><span class="text">삭제</span></button>
-                    <router-link tag="button" to="list" class="btn textBtn hasIcon list"><span class="text">목록</span></router-link>
-                </div>
+            </div>            
+            <div class="btnArea mgT10 txtRight rowBoxBtnArea">
+                <router-link tag="button" to="edit" class="btn l cGrayGreen w100px"><span class="text">수정</span></router-link>
+                <button type="button" class="btn l cGrayGreen w100px" @click="fnOpen('modal-1')"><span class="text">삭제</span></button>
+                <router-link tag="button" to="list" class="btn l cGreen w100px"><span class="text">목록</span></router-link>
             </div>
         </div>
         <div class="unitBox">
@@ -115,45 +113,51 @@
                     <button class="btn cGreen comAddBtn" @click="fnOpen('modal-2')">등록</button>
                 </div>
                 <div class="commentConWrap">
+                    <div class="userImgBox">
+                        <img :src="require(`@/assets/images/ico_user_type02.png`)" alt="유저 이미지">
+                    </div>
                     <div class="userInfoArea">
                         <div class="userInfo">
-                            <i class="userIcon"><span class="hiddenTxt">유저아이콘</span></i>
                             <span class="name">홍길*</span>
                             <span class="date">2021-02-15</span>
-                        </div>
-                        <div class="btnArea">
-                            <button type="button" class="btn m cWhiteGreen"><span class="text">답글</span></button>
+                        </div>                        
+                        <div class="contentArea">
+                            <span class="content">유익한 글 잘 봤습니다.   추후 2020년까지의 데이터로 주기성을 띄는 데이터를 확보한 뒤 이를 예측에 활용하면 더 의미있는 결과를 얻을 수 있을 것으로 보입니다.</span>
                         </div>
                     </div>
-                    <div class="contentArea">
-                        <span class="content">유익한 글 잘 봤습니다.<br>추후 2020년까지의 데이터로 주기성을 띄는 데이터를 확보한 뒤 이를 예측에 활용하면 더 의미있는 결과를 얻을 수 있을 것으로 보입니다.</span>
+                    <div class="btnArea">
+                        <button type="button" class="btn m cWhiteGreen"><span class="text">답글</span></button>
                     </div>
                 </div>
                 <div class="commentConWrap">
+                    <div class="userImgBox">
+                        <img :src="require(`@/assets/images/ico_user_type02.png`)" alt="유저 이미지">
+                    </div>
                     <div class="userInfoArea">
                         <div class="userInfo">
-                            <i class="userIcon"><span class="hiddenTxt">유저아이콘</span></i>
                             <span class="name">홍길*</span>
                             <span class="date">2021-02-15</span>
-                        </div>
-                        <div class="btnArea">
-                            <button type="button" class="btn m cWhiteGreen"><span class="text">답글</span></button>
+                        </div>                        
+                        <div class="contentArea">
+                            <span class="content">온도, 습도와 같이 계절성이 좀 더 짙은 데이터에서는 Prophet의 예측이 많이 빗나가 보입니다. <br>Prophet 모델을 만들 때 yearly_seasonality로 연주기성을 부여했으나, 1년이 되지 않는 데이터를 입력했기 때문으로 보여집니다.<br>이 점을 개선한다면 좋을 것 같습니다.</span>
                         </div>
                     </div>
-                    <div class="contentArea">
-                        <span class="content">온도, 습도와 같이 계절성이 좀 더 짙은 데이터에서는 Prophet의 예측이 많이 빗나가 보입니다. <br>Prophet 모델을 만들 때 yearly_seasonality로 연주기성을 부여했으나, 1년이 되지 않는 데이터를 입력했기 때문으로 보여집니다.<br>이 점을 개선한다면 좋을 것 같습니다.</span>
+                    <div class="btnArea">
+                        <button type="button" class="btn m cWhiteGreen"><span class="text">답글</span></button>
                     </div>
                 </div>
                 <div class="commentConWrap recomment">
+                    <div class="userImgBox">
+                        <img :src="require(`@/assets/images/ico_user_type02.png`)" alt="유저 이미지">
+                    </div>
                     <div class="userInfoArea">
                         <div class="userInfo">
-                            <i class="userIcon"><span class="hiddenTxt">유저아이콘</span></i>
                             <span class="name">홍길*</span>
                             <span class="date">2021-02-15</span>
+                        </div>                        
+                        <div class="contentArea">
+                            <span class="content">온도, 습도와 같이 계절성이 좀 더 짙은 데이터에서는 Prophet의 예측이 많이 빗나가 보입니다. <br>Prophet 모델을 만들 때 yearly_seasonality로 연주기성을 부여했으나, 1년이 되지 않는 데이터를 입력했기 때문으로 보여집니다.<br>이 점을 개선한다면 좋을 것 같습니다.</span>
                         </div>
-                    </div>
-                    <div class="contentArea">
-                        <span class="content">댓글 감사합니다. 참고하여 좀 더 보완해보도록 하겠습니다.</span>
                     </div>
                 </div>
             </div>
