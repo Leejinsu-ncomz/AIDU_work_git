@@ -32,8 +32,9 @@
             </div>
         </div>
         <div class="unitBox tabType02">
-            <div class="tabWrap type02">
-                <div class="tabHeader">
+            <!-- 210504 full 클래스 추가해주세요 -->>
+            <div class="tabWrap type02 full">
+                <div class="tabHeader">                    
                     <ul>
                         <li v-bind:class="{active: tabActvie[0].active}" @click="fnTab(tabActvie[0], tabShow[0])"><button>기본정보</button></li>
                         <li v-bind:class="{active: tabActvie[1].active}" @click="fnTab(tabActvie[1], tabShow[1])"><button>프로젝트 멤버</button></li>
@@ -491,7 +492,7 @@
                                     <tr>
                                         <td>27523</td>
                                         <td class="txtLeft">
-                                            <img :src="require(`@/assets/images/ico_Tensorflow.png`)" alt="Tensorflow 이미지">Tensorflow 2.2                                        
+                                            <img :src="require(`@/assets/images/ico_lock.png`)" alt="Tensorflow 이미지">Tensorflow 2.2                                        
                                         </td>
                                         <td>CPU : 1Core / Memory : 2GB / GPU : 0EA</td>
                                         <td>홍길동</td>

@@ -4,6 +4,10 @@
             <h1 class="logo"><img :src="require(`@/assets/images/logo.png`)" alt="AIDU"></h1>
             <GNB @sub_menu_show_bg="subMenuBgShowData"></GNB>
             <div class="loginJoinWrap">
+              <!-- <div class="loginWrap">
+                <a href="javascript:void(0);">로그인</a>
+                <a href="javascript:void(0);">회원가입</a>
+              </div> -->
               <span class="userName">홍길동</span>
               <button type="button" v-bind:class="['subUserInfo_btn', {up: userInfo}]" @click="userInfo = !userInfo"><span class="hiddenTxt">유저 세부 정보 버튼</span></button>
               <i class="userIcon"><span class="hiddenTxt">유저 아이콘</span></i>

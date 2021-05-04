@@ -34,6 +34,19 @@ const projectRouter = [{
   ]
 }]
 
+const aiStudyRouter = [{
+  path: 'aiStudy',
+  name: 'aiStudyLayout',
+  title: 'AI 강좌 레이아웃',
+  component: () => import('@/views/aiStudy/m3_layout'),
+  children: [{
+    path: 'contents',
+    name: 'aiStudyContents',
+    title: 'AI 교육 컨텐츠',
+    component: () => import('@/views/aiStudy/m3_01_01_000')
+  }]
+}]
+
 const studyRouter = [{
   path: 'study',
   name: 'StudyLayout',
@@ -212,6 +225,30 @@ const account = [{
   component: () => import('@/views/user/m1_02_03_000')
 }]
 
+const userChange = [
+  {
+    path: 'userChange',
+    name: 'UserChange',
+    title: '프로필 변경',
+    component: () => import('@/views/user/m7_01_01_000')
+  },{
+    path: 'userCitation',
+    name: 'UserCitation',
+    title: '회원탈퇴 본인인증',
+    component: () => import('@/views/user/m7_01_02_000')
+  },{
+    path: 'userSecede',
+    name: 'UserSecede',
+    title: '회원탈퇴',
+    component: () => import('@/views/user/m7_01_02_001')
+  },{
+    path: 'userSecedeComplete',
+    name: 'UserSecedeComplete',
+    title: '회원탈퇴완료',
+    component: () => import('@/views/user/m7_01_02_002')
+  }
+]
+
 const error = [{
   path: '/error',
   name: 'errorPage',
@@ -247,6 +284,7 @@ export const router = new Router({
     children: [
       ...portalHomeRouter,
       ...projectRouter,
+      ...aiStudyRouter,
       ...studyRouter,
       ...catalogRouter,
       ...boardRouter,
@@ -258,7 +296,8 @@ export const router = new Router({
     component: UserLayout,
     children: [
       ...account,
-      ...join
+      ...join,
+      ...userChange
     ]
   }, {
     path: '/',

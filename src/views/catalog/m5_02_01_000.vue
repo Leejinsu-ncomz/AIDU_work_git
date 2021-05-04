@@ -11,8 +11,9 @@
         <div class="unitBox">
             <div class="aiduListdetail">
                 <div class="detailWrap">
-                    <div class="imgBox">
-                        <img :src="require(`@/assets/images/ico_userMessage.png`)" alt="예시 이미지" />
+                    <!-- 210504 certified 클래스 추가해주세요 -->
+                    <div class="imgBox certified">
+                        <img :src="require(`@/assets/images/ico_jupyter.png`)" alt="예시 이미지" />
                     </div>
                     <div class="contentBox">
                         <div class="badgeWrap">
@@ -52,12 +53,12 @@
                         </div>
                         <div class="otherWrap">
                             <ul class="hashTagWrap">
-                                <li><a href="javascript:void(0)">#test</a></li>
-                                <li><a href="javascript:void(0)">#jeju</a></li>
-                                <li><a href="javascript:void(0)">#air data</a></li>
-                                <li><a href="javascript:void(0)">#fine dust</a></li>
-                                <li><a href="javascript:void(0)">#expectation</a></li>
-                                <li><a href="javascript:void(0)">#model</a></li>
+                                <li>#test</li>
+                                <li>#jeju</li>
+                                <li>#air data</li>
+                                <li>#fine dust</li>
+                                <li>#expectation</li>
+                                <li>#model</li>
                             </ul>                                    
                             <div class="dateWrap">
                                 <span class="date">2021-02-20</span>
@@ -126,6 +127,10 @@
                             </tbody>
                         </table>
                     </div>
+                    <!-- 210427 목록 버튼 추가 -->
+                    <div class="btnArea mgT10 txtRight rowBoxBtnArea">
+                        <router-link to="/catalog/list" tag="button" class="btn l cGreen w100px"><span class="text">목록</span></router-link>
+                    </div>
                 </div> 
                 <!-- 사용법 -->
                 <div v-if="tabShow[1].active" class="tabContainer">
@@ -146,6 +151,10 @@
                                 </tr>                                                      
                             </tbody>
                         </table>
+                    </div>
+                    <!-- 210427 목록 버튼 추가 -->
+                    <div class="btnArea mgT10 txtRight rowBoxBtnArea">
+                        <router-link to="/catalog/list" tag="button" class="btn l cGreen w100px"><span class="text">목록</span></router-link>
                     </div>
                 </div> 
                 <!-- 파일 -->
@@ -234,6 +243,10 @@
                                 <div class="sorceView" style="background: #f1f1f1; height: 1000px;"></div>
                             </div>
                         </div>
+                    </div>        
+                    <!-- 210427 목록 버튼 추가 -->            
+                    <div class="btnArea mgT10 txtRight rowBoxBtnArea">
+                        <router-link to="/catalog/list" tag="button" class="btn l cGreen w100px"><span class="text">목록</span></router-link>
                     </div>
                 </div> 
                 <!-- 시뮬레이터 -->
@@ -281,15 +294,17 @@
                         <div>
                             <div class="sorceViewTitWrap flexBox justifyContent">
                                 <span class="tit">Response</span>
-                                <div class="btnArea">
-                                    <button type="button" class="btn textBtn hasIcon enrollment"><span class="text">시뮬레이터 실행</span></button>
-                                </div>
                             </div>
                             <div class="sorceViewWrap">                                    
                                 <!-- 실제 개발시 style을 제거 해주세요. -->
                                 <div class="sorceView" style="background: #f1f1f1; height: 1000px;"></div>
                             </div>
                         </div>
+                    </div>           
+                    <!-- 210427 목록 버튼 추가 -->         
+                    <div class="btnArea mgT10 txtRight rowBoxBtnArea">
+                        <button type="button" class="btn l cGreen">시뮬레이터 실행</button>
+                        <router-link to="/catalog/list" tag="button" class="btn l cGreen w100px"><span class="text">목록</span></router-link>
                     </div>
                 </div>            
             </div>
@@ -317,7 +332,22 @@
                         </div>
                     </div>
                     <div class="btnArea">
-                        <button type="button" class="btn m cWhiteGreen"><span class="text">답글</span></button>
+                        <!-- 210429 버튼 클래스 m에서 s로 변경 -->
+                        <button type="button" class="btn s cWhiteGreen"><span class="text">답글</span></button>
+                    </div>
+                    <!-- 210429 댓글 수정 / 삭제 버튼 추가 -->
+                    <div class="commentInfoBtnArea">
+                        <button type="button" class="commentInfoBtn">
+                            <span class="hiddenTxt">댓글 수정/삭제 버튼</span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </button>
+                        <!-- show 클래스 추가시 나타납니다. -->
+                        <div class="editRemoveWrap">
+                            <button type="button">수정</button>
+                            <button type="button">삭제</button>
+                        </div>
                     </div>
                 </div>
                 <div class="commentConWrap">
@@ -334,7 +364,35 @@
                         </div>
                     </div>
                     <div class="btnArea">
-                        <button type="button" class="btn m cWhiteGreen"><span class="text">답글</span></button>
+                        <button type="button" class="btn s cWhiteGreen"><span class="text">답글</span></button>
+                    </div>
+                    <!-- 210429 댓글 수정 / 삭제 버튼 추가 -->
+                    <div class="commentInfoBtnArea">
+                        <button type="button" class="commentInfoBtn">
+                            <span class="hiddenTxt">댓글 수정/삭제 버튼</span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </button>
+                        <!-- show 클래스 추가시 나타납니다. -->
+                        <div class="editRemoveWrap show">
+                            <button type="button">수정</button>
+                            <button type="button">삭제</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 210429 댓글의 댓글 영역 추가 -->
+                <!-- show 클래스를 넣으면 나타납니다. -->
+                <div class="commentConWrap recomment writeWrap show">
+                    <div class="userImgBox">
+                        <img :src="require(`@/assets/images/ico_user_type02.png`)" alt="유저 이미지">
+                    </div>                    
+                    <div class="commentWriteWrap">
+                        <textarea class="inp" placeholder="AIDU 학습서에 대한 다양한 의견을 나누세요."></textarea>
+                        <div class="btnArea">
+                            <button type="button" class="btn cGreen comAddBtn" @click="fnOpen('modal-2')">등록</button>
+                            <button type="button" class="btn textBtn s underLine cancelBtn"><span class="text">취소</span></button>
+                        </div>
                     </div>
                 </div>
                 <div class="commentConWrap recomment">

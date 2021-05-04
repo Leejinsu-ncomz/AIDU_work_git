@@ -25,25 +25,30 @@
             <div class="flexBox">
                 <div class="btnArea">
                     <span class="amountTxt"><em class="bold">70</em>건</span>
-                    <button type="button" class="btn textBtn l"><span class="text">최신순</span></button>
-                    <button type="button" class="btn textBtn l"><span class="text">제목순</span></button>
-                    <button type="button" class="btn textBtn l"><span class="text">인기순</span></button>
+                    <!-- 210429 버튼에 orderBtn 클래스 추가해주세요 orderActive 클래스 추가시 정렬 효과 나타낼 수 있습니다. -->
+                    <button type="button" class="btn textBtn orderBtn l orderActive"><span class="text">최신순</span></button>
+                    <button type="button" class="btn textBtn orderBtn l"><span class="text">제목순</span></button>
+                    <button type="button" class="btn textBtn orderBtn l"><span class="text">인기순</span></button>
                 </div>
             </div>
         </div>
         <div class="unitBox mgT40">
             <div class="aiduList type02 col4">
                 <ul class="aiduListWrap">
-                    <li>
+                    <!-- 210503 임시저장시 active 클래스 추가해주세요 -->
+                    <li class="active">
                         <div class="modelTopArea">
                             <div class="badgeWrap">
                                 <span class="modelBadge type09">L1</span>
                                 <span class="modelBadge type01">이상탐지</span>
                             </div>
                             <div class="btnArea">
-                                <i class="jupyterIcon"><div class="hiddenTxt">jupyter 아이콘</div></i>
+                                <!-- 210503 아이콘 변경 -->
+                                <i class="catalogoIcon type02"><div class="hiddenTxt">jupyter 아이콘</div></i>
                                 <!-- active 클래스 추가시 클릭 효과가 나탑납니다. -->
-                                <button class="favoritesBtn active"><span class="hiddenTxt">즐겨찾기 버튼</span></button>
+                                <!-- <button class="favoritesBtn active"><span class="hiddenTxt">즐겨찾기 버튼</span></button> -->
+                                <!-- 210503 임시저장 삭제 버튼 추가 -->
+                                <button class="tempoDelBtn"><span class="hiddenTxt">임시저장 삭제 버튼</span></button>
                             </div>
                         </div>
                         <!-- CERTIFIED 표시시 certified 클래스 추가해주세요-->
@@ -56,10 +61,10 @@
                             </div>
                             <div class="hashTagWrap">
                                 <ul>
-                                    <li><a href="javascript:void(0)">#아이리스</a></li>
-                                    <li><a href="javascript:void(0)">#불꽃분류</a></li>
-                                    <li><a href="javascript:void(0)">#test</a></li>
-                                    <li><a href="javascript:void(0)">#testtest</a></li>
+                                    <li>#아이리스</li>
+                                    <li>#불꽃분류</li>
+                                    <li>#test</li>
+                                    <li>#testtest</li>
                                 </ul>
                             </div>
                             <div class="subInfoWrap">
@@ -94,7 +99,8 @@
                                 <span class="modelBadge type02">군집</span>
                             </div>
                             <div class="btnArea">
-                                <i class="jupyterIcon"><div class="hiddenTxt">jupyter 아이콘</div></i>
+                                <!-- 210503 아이콘 변경 -->
+                                <i class="catalogoIcon type03"><div class="hiddenTxt">aidu ez 아이콘</div></i>
                                 <!-- active 클래스 추가시 클릭 효과가 나탑납니다. -->
                                 <button class="favoritesBtn"><span class="hiddenTxt">즐겨찾기 버튼</span></button>
                             </div>
@@ -108,10 +114,10 @@
                             </div>
                             <div class="hashTagWrap">
                                 <ul>
-                                    <li><a href="javascript:void(0)">#아이리스</a></li>
-                                    <li><a href="javascript:void(0)">#불꽃분류</a></li>
-                                    <li><a href="javascript:void(0)">#test</a></li>
-                                    <li><a href="javascript:void(0)">#testtest</a></li>
+                                    <li>#아이리스</li>
+                                    <li>#불꽃분류</li>
+                                    <li>#test</li>
+                                    <li>#testtest</li>
                                 </ul>
                             </div>
                             <div class="subInfoWrap">
@@ -146,7 +152,8 @@
                                 <span class="modelBadge type03">분류</span>
                             </div>
                             <div class="btnArea">
-                                <i class="jupyterIcon"><div class="hiddenTxt">jupyter 아이콘</div></i>
+                                <!-- 210503 아이콘 변경 -->
+                                <i class="catalogoIcon type04"><div class="hiddenTxt">외부참조보델 아이콘</div></i>
                                 <!-- active 클래스 추가시 클릭 효과가 나탑납니다. -->
                                 <button class="favoritesBtn"><span class="hiddenTxt">즐겨찾기 버튼</span></button>
                             </div>
@@ -160,10 +167,10 @@
                             </div>
                             <div class="hashTagWrap">
                                 <ul>
-                                    <li><a href="javascript:void(0)">#아이리스</a></li>
-                                    <li><a href="javascript:void(0)">#불꽃분류</a></li>
-                                    <li><a href="javascript:void(0)">#test</a></li>
-                                    <li><a href="javascript:void(0)">#testtest</a></li>
+                                    <li>#아이리스</li>
+                                    <li>#불꽃분류</li>
+                                    <li>#test</li>
+                                    <li>#testtest</li>
                                 </ul>
                             </div>
                             <div class="subInfoWrap">
@@ -198,7 +205,8 @@
                                 <span class="modelBadge type04">최적화</span>
                             </div>
                             <div class="btnArea">
-                                <i class="jupyterIcon"><div class="hiddenTxt">jupyter 아이콘</div></i>
+                                <!-- 210503 아이콘 변경 -->
+                                <i class="catalogoIcon type02"><div class="hiddenTxt">jupyter 아이콘</div></i>
                                 <!-- active 클래스 추가시 클릭 효과가 나탑납니다. -->
                                 <button class="favoritesBtn"><span class="hiddenTxt">즐겨찾기 버튼</span></button>
                             </div>
@@ -212,10 +220,10 @@
                             </div>
                             <div class="hashTagWrap">
                                 <ul>
-                                    <li><a href="javascript:void(0)">#아이리스</a></li>
-                                    <li><a href="javascript:void(0)">#불꽃분류</a></li>
-                                    <li><a href="javascript:void(0)">#test</a></li>
-                                    <li><a href="javascript:void(0)">#testtest</a></li>
+                                    <li>#아이리스</li>
+                                    <li>#불꽃분류</li>
+                                    <li>#test</li>
+                                    <li>#testtest</li>
                                 </ul>
                             </div>
                             <div class="subInfoWrap">
@@ -250,7 +258,8 @@
                                 <span class="modelBadge type05">추천</span>
                             </div>
                             <div class="btnArea">
-                                <i class="jupyterIcon"><div class="hiddenTxt">jupyter 아이콘</div></i>
+                                <!-- 210503 아이콘 변경 -->
+                                <i class="catalogoIcon type02"><div class="hiddenTxt">jupyter 아이콘</div></i>
                                 <!-- active 클래스 추가시 클릭 효과가 나탑납니다. -->
                                 <button class="favoritesBtn"><span class="hiddenTxt">즐겨찾기 버튼</span></button>
                             </div>
@@ -264,10 +273,10 @@
                             </div>
                             <div class="hashTagWrap">
                                 <ul>
-                                    <li><a href="javascript:void(0)">#아이리스</a></li>
-                                    <li><a href="javascript:void(0)">#불꽃분류</a></li>
-                                    <li><a href="javascript:void(0)">#test</a></li>
-                                    <li><a href="javascript:void(0)">#testtest</a></li>
+                                    <li>#아이리스</li>
+                                    <li>#불꽃분류</li>
+                                    <li>#test</li>
+                                    <li>#testtest</li>
                                 </ul>
                             </div>
                             <div class="subInfoWrap">
@@ -302,7 +311,8 @@
                                 <span class="modelBadge type06">회귀</span>
                             </div>
                             <div class="btnArea">
-                                <i class="jupyterIcon"><div class="hiddenTxt">jupyter 아이콘</div></i>
+                                <!-- 210503 아이콘 변경 -->
+                                <i class="catalogoIcon type02"><div class="hiddenTxt">jupyter 아이콘</div></i>
                                 <!-- active 클래스 추가시 클릭 효과가 나탑납니다. -->
                                 <button class="favoritesBtn"><span class="hiddenTxt">즐겨찾기 버튼</span></button>
                             </div>
@@ -316,10 +326,10 @@
                             </div>
                             <div class="hashTagWrap">
                                 <ul>
-                                    <li><a href="javascript:void(0)">#아이리스</a></li>
-                                    <li><a href="javascript:void(0)">#불꽃분류</a></li>
-                                    <li><a href="javascript:void(0)">#test</a></li>
-                                    <li><a href="javascript:void(0)">#testtest</a></li>
+                                    <li>#아이리스</li>
+                                    <li>#불꽃분류</li>
+                                    <li>#test</li>
+                                    <li>#testtest</li>
                                 </ul>
                             </div>
                             <div class="subInfoWrap">
@@ -354,7 +364,8 @@
                                 <span class="modelBadge type07">텍스트분석</span>
                             </div>
                             <div class="btnArea">
-                                <i class="jupyterIcon"><div class="hiddenTxt">jupyter 아이콘</div></i>
+                                <!-- 210503 아이콘 변경 -->
+                                <i class="catalogoIcon type02"><div class="hiddenTxt">jupyter 아이콘</div></i>
                                 <!-- active 클래스 추가시 클릭 효과가 나탑납니다. -->
                                 <button class="favoritesBtn"><span class="hiddenTxt">즐겨찾기 버튼</span></button>
                             </div>
@@ -368,10 +379,10 @@
                             </div>
                             <div class="hashTagWrap">
                                 <ul>
-                                    <li><a href="javascript:void(0)">#아이리스</a></li>
-                                    <li><a href="javascript:void(0)">#불꽃분류</a></li>
-                                    <li><a href="javascript:void(0)">#test</a></li>
-                                    <li><a href="javascript:void(0)">#testtest</a></li>
+                                    <li>#아이리스</li>
+                                    <li>#불꽃분류</li>
+                                    <li>#test</li>
+                                    <li>#testtest</li>
                                 </ul>
                             </div>
                             <div class="subInfoWrap">
@@ -406,7 +417,8 @@
                                 <span class="modelBadge type08">기타</span>
                             </div>
                             <div class="btnArea">
-                                <i class="jupyterIcon"><div class="hiddenTxt">jupyter 아이콘</div></i>
+                                <!-- 210503 아이콘 변경 -->
+                                <i class="catalogoIcon type02"><div class="hiddenTxt">jupyter 아이콘</div></i>
                                 <!-- active 클래스 추가시 클릭 효과가 나탑납니다. -->
                                 <button class="favoritesBtn"><span class="hiddenTxt">즐겨찾기 버튼</span></button>
                             </div>
@@ -420,10 +432,10 @@
                             </div>
                             <div class="hashTagWrap">
                                 <ul>
-                                    <li><a href="javascript:void(0)">#아이리스</a></li>
-                                    <li><a href="javascript:void(0)">#불꽃분류</a></li>
-                                    <li><a href="javascript:void(0)">#test</a></li>
-                                    <li><a href="javascript:void(0)">#testtest</a></li>
+                                    <li>#아이리스</li>
+                                    <li>#불꽃분류</li>
+                                    <li>#test</li>
+                                    <li>#testtest</li>
                                 </ul>
                             </div>
                             <div class="subInfoWrap">
@@ -453,8 +465,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        
+        </div>        
         <!-- 프로젝트 생성 팝업-->
         <div class="layerModalWrap" v-if="modalShow === 'modal-1'" >
             <div class="layerModal">

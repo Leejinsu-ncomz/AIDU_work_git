@@ -86,7 +86,17 @@
 .unitGroup.rowGroup .unit dt{margin-bottom:9px;}
 .unitGroup.rowGroup .unit dt .tit{font-size:15px; line-height:17px; font-weight:400; color:#667d85;}
 .unitGroup.rowGroup .unit dd > *{width:100%;}
-
+.unitGroup .unit .imgBox,
+.unitGroup .unit .infoBox {margin-bottom: 0px;}
+.unitGroup .unit .imgBox {display: flex;align-items: center;justify-content: center;}
+.unitGroup .unit .imgBox img {width: 130px;height: 130px;border: 1px solid #dddddd;border-radius: 50%;}
+.unitGroup .unit .infoBox {flex-wrap: wrap;padding: 20px 0px;}
+.unitGroup .unit .infoBox > * {width: 100%;flex: 0 0 100%;}
+.unitGroup .unit .infoBox .tit {font-size: 20px;font-weight: 500;line-height: 40px;}
+.unitGroup .unit .infoBox .manageBox {display: flex;align-items: center;}
+.unitGroup .unit .infoBox .manageBox > * {font-size: 16px;line-height: 40px;text-decoration: underline;color: #9cacb1;}
+.unitGroup .unit .infoBox .manageBox > *:hover {color: #397fd4;}
+.unitGroup .unit .infoBox .manageBox > * + * {margin-left: 30px;}
 /* search area, inpGroup */
 .searchArea,
 .inpGroup{display:flex; align-items:center;}

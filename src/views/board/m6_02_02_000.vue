@@ -52,16 +52,15 @@
                 </div>
             </div>
         </div>
-        <div class="unitBox mgT70">
+        <div class="unitBox">
             <div class="commentWrap">
                 <div class="commentTitWrap">
-                    <span class="tit">댓글(11)</span>
+                    <span class="tit">댓글 (11)</span>
                 </div>
                 <div class="commentWriteWrap">
                     <textarea class="inp" placeholder="AIDU 학습서에 대한 다양한 의견을 나누세요."></textarea>
                     <button class="btn cGreen comAddBtn" @click="fnOpen('modal-2')">등록</button>
                 </div>
-                
                 <div class="commentConWrap">
                     <div class="userImgBox">
                         <img :src="require(`@/assets/images/ico_user_type02.png`)" alt="유저 이미지">
@@ -76,7 +75,22 @@
                         </div>
                     </div>
                     <div class="btnArea">
-                        <button type="button" class="btn m cWhiteGreen"><span class="text">답글</span></button>
+                        <!-- 210429 버튼 클래스 m에서 s로 변경 -->
+                        <button type="button" class="btn s cWhiteGreen"><span class="text">답글</span></button>
+                    </div>
+                    <!-- 210429 댓글 수정 / 삭제 버튼 추가 -->
+                    <div class="commentInfoBtnArea">
+                        <button type="button" class="commentInfoBtn">
+                            <span class="hiddenTxt">댓글 수정/삭제 버튼</span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </button>
+                        <!-- show 클래스 추가시 나타납니다. -->
+                        <div class="editRemoveWrap">
+                            <button type="button">수정</button>
+                            <button type="button">삭제</button>
+                        </div>
                     </div>
                 </div>
                 <div class="commentConWrap">
@@ -93,7 +107,35 @@
                         </div>
                     </div>
                     <div class="btnArea">
-                        <button type="button" class="btn m cWhiteGreen"><span class="text">답글</span></button>
+                        <button type="button" class="btn s cWhiteGreen"><span class="text">답글</span></button>
+                    </div>
+                    <!-- 210429 댓글 수정 / 삭제 버튼 추가 -->
+                    <div class="commentInfoBtnArea">
+                        <button type="button" class="commentInfoBtn">
+                            <span class="hiddenTxt">댓글 수정/삭제 버튼</span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </button>
+                        <!-- show 클래스 추가시 나타납니다. -->
+                        <div class="editRemoveWrap show">
+                            <button type="button">수정</button>
+                            <button type="button">삭제</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 210429 댓글의 댓글 영역 추가 -->
+                <!-- show 클래스를 넣으면 나타납니다. -->
+                <div class="commentConWrap recomment writeWrap show">
+                    <div class="userImgBox">
+                        <img :src="require(`@/assets/images/ico_user_type02.png`)" alt="유저 이미지">
+                    </div>                    
+                    <div class="commentWriteWrap">
+                        <textarea class="inp" placeholder="AIDU 학습서에 대한 다양한 의견을 나누세요."></textarea>
+                        <div class="btnArea">
+                            <button type="button" class="btn cGreen comAddBtn" @click="fnOpen('modal-2')">등록</button>
+                            <button type="button" class="btn textBtn s underLine cancelBtn"><span class="text">취소</span></button>
+                        </div>
                     </div>
                 </div>
                 <div class="commentConWrap recomment">
